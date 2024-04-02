@@ -42,7 +42,7 @@ e.	dmwr_mask_out: This is a 4-bit mask signal that decides the bits to be masked
 # INTRODUCTION
 Computers are built on specific architectural designs that dictate how instructions are executed and processed. Two primary architectures exist: Complex Instruction Set Computer (CISC) and Reduced Instruction Set Computer (RISC).
 
-* RISC (Reduced Instruction Set Computer)
+RISC (Reduced Instruction Set Computer)
 RISC architecture, on the contrary, focuses on a reduced set of simple instructions, each typically executed in a single clock cycle. This simplicity results in faster execution and improved performance.
 RISC architectures prioritize efficiency by favoring a smaller set of instructions, emphasizing faster instruction execution, and enabling better pipelining and parallelism. Notable RISC architectures include ARM and MIPS.
 
