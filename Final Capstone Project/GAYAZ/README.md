@@ -110,7 +110,7 @@ A write enable generator is a component within a computer system, often found in
 </p>
 
 
-* <i><b>Immediate Adder<i><b>
+* <i><b>Immediate Adder</i></b>
 
 An immediate adder, also known as a constant adder or immediate arithmetic unit, is a component found within a CPU's arithmetic logic unit (ALU) that performs addition operations involving immediate values or constants.Immediate adders are commonly used in CPU architectures to perform arithmetic operations that involve immediate values, such as adding constants to variables or performing arithmetic with small fixed values. They play a crucial role in executing instructions efficiently, particularly in the context of arithmetic and logical operations with immediate operands.
 
