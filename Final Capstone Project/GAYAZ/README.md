@@ -60,7 +60,7 @@ RISC-V stands as a cutting-edge open-source instruction set architecture (ISA) t
 </p>
 
 
-#### 2.1.3	Advantages of RISC-V
+#### 	Advantages of RISC-V
 RISC-V stands as a beacon in modern computing due to its revolutionary features and adaptable nature, encompassing several advantages:
 
 *	Openness and Accessibility: RISC-V's open-source nature democratizes access to the ISA, enabling innovation without licensing fees or restrictions.
