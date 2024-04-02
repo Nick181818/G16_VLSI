@@ -87,10 +87,7 @@ The Program Counter is a register in a CPU that stores the memory address of the
 <p align ="center">
  <img src="https://github.com/GayazPatan/Images/assets/156210984/bd0a19ad-5370-4b72-bf24-dd0e57978321" width="720px" height=auto />
 </p>
-ALU Unit
-<p align ="center">
- <img src="https://github.com/GayazPatan/Images/assets/156210984/eeb3c389-f1cf-478a-99f3-d78ab34aef46" width="720px" height=auto />
-</p>
+
 Write Enable Generator
 <p align ="center">
  <img src="https://github.com/GayazPatan/Images/assets/156210984/2fc9efe2-518d-466a-aa16-bd1fa1ac3784" width="720px" height=auto />
@@ -106,6 +103,12 @@ Immd adder
 immed generator
 <p align ="center">
  <img src="https://github.com/GayazPatan/Images/assets/156210984/4e1d433f-a822-4599-9a84-f2af6685f7e9" width="720px" height=auto />
+</p>
+
+
+ALU Unit
+<p align ="center">
+ <img src="https://github.com/GayazPatan/Images/assets/156210984/eeb3c389-f1cf-478a-99f3-d78ab34aef46" width="720px" height=auto />
 </p>
 
 Store unit
