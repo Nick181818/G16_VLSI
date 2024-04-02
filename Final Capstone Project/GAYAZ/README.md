@@ -88,6 +88,17 @@ The Program Counter is a register in a CPU that stores the memory address of the
  <img src="https://github.com/GayazPatan/Images/assets/156210984/bd0a19ad-5370-4b72-bf24-dd0e57978321" width="720px" height=auto />
 </p>
 
+Branch Unit
+
+One of the key functions of the branch unit is to predict the outcome of branch instructions before their execution. This prediction is based on various factors, such as the history of previous branches, the program counter (PC), and branch history tables. Predicting whether a branch will be taken (i.e., the condition will evaluate to true) or not taken (i.e., the condition will evaluate to false) is crucial for minimizing pipeline stalls and improving performance.When a branch instruction is encountered, the branch unit calculates the target address of the branch. This target address determines the location in the instruction stream where program execution will continue after the branch is resolved.
+
+Control unit
+
+The Control Unit (CU) is a core component of the Central Processing Unit (CPU) responsible for coordinating and directing the operation of the entire processor. It interprets and executes instructions, directing the flow of data between the CPU's various functional units and external devices. The primary functions of the control unit include instruction decoding, instruction sequencing, and generating control signals to coordinate the operation of other CPU components.
+
+Instruction Unit
+An instruction multiplexer (mux) is a component within a CPU's control unit responsible for selecting the next instruction to be executed from among multiple possible sources. It plays a crucial role in directing the flow of instruction execution within the CPU.Instruction muxes are often used at various stages of the CPU's instruction pipeline to select the appropriate instruction for each pipeline stage. This helps ensure that instructions are fetched and processed efficiently, minimizing pipeline stalls and improving overall CPU performance.
+
 Write Enable Generator
 
 A write enable generator is a component within a computer system, often found in memory and input/output (I/O) interfaces, that generates signals to control when data can be written to a specific location in memory or when output data can be enabled for transmission.The write enable generator plays a crucial role in coordinating write operations in computer systems, ensuring that data is written or output only when appropriate and in a manner consistent with the system's operation.
