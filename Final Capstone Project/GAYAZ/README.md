@@ -89,35 +89,70 @@ The Program Counter is a register in a CPU that stores the memory address of the
 </p>
 
 Write Enable Generator
+
+A write enable generator is a component within a computer system, often found in memory and input/output (I/O) interfaces, that generates signals to control when data can be written to a specific location in memory or when output data can be enabled for transmission.The write enable generator plays a crucial role in coordinating write operations in computer systems, ensuring that data is written or output only when appropriate and in a manner consistent with the system's operation.
+
 <p align ="center">
  <img src="https://github.com/GayazPatan/Images/assets/156210984/2fc9efe2-518d-466a-aa16-bd1fa1ac3784" width="720px" height=auto />
 </p>
 
 
-Immd adder
+Immediate Adder
+
+An immediate adder, also known as a constant adder or immediate arithmetic unit, is a component found within a CPU's arithmetic logic unit (ALU) that performs addition operations involving immediate values or constants.Immediate adders are commonly used in CPU architectures to perform arithmetic operations that involve immediate values, such as adding constants to variables or performing arithmetic with small fixed values. They play a crucial role in executing instructions efficiently, particularly in the context of arithmetic and logical operations with immediate operands.
+
+
 <p align ="center">
  <img src="https://github.com/GayazPatan/Images/assets/156210984/be1b8bff-7fd4-4169-83d0-d05f0fdfb885" width="720px" height=auto />
 </p>
 
 
-immed generator
+Immediate Generator
+
+Immediate generators are essential for efficient execution of instructions that involve immediate operands, as they eliminate the need to access memory or registers to fetch these constants, thereby reducing latency and improving performance.
+
+Constant Encoding: In some architectures, the immediate values are encoded directly within the instruction bits. The immediate generator decodes these encoded values and provides them to the execution units.
+
+Sign Extension: For signed immediate values, the immediate generator may perform sign extension, which extends the sign bit of the immediate value to fill the full width of the operand, ensuring correct arithmetic operations.
+
+Zero Extension: Similarly, for unsigned immediate values, the immediate generator may perform zero extension, which fills the unused bits with zeroes to match the operand width.
+
+Shift and Masking: In some cases, the immediate generator may perform shifting or masking operations to adjust the immediate value according to the instruction's requirements.
+
 <p align ="center">
  <img src="https://github.com/GayazPatan/Images/assets/156210984/4e1d433f-a822-4599-9a84-f2af6685f7e9" width="720px" height=auto />
 </p>
 
 
 ALU Unit
+The Arithmetic Logic Unit (ALU) is a fundamental component of a CPU responsible for performing arithmetic and logical operations on data. It's a combinational circuit that takes input data from registers, performs the specified operation, and produces the result.
+
+Inputs: The ALU receives operands from CPU registers or memory. These operands are the data on which the arithmetic or logical operation is to be performed. In some cases, the ALU may also receive control signals specifying the operation to be executed.
+
+Operations: The ALU can perform a variety of operations, including addition, subtraction, AND, OR, XOR, shift operations (left shift, right shift), comparison (equality, less than, greater than), and more. The specific operation performed is determined by control signals received by the ALU.
+
+Output: After performing the operation, the ALU produces a result, which is typically stored back in a register or sent to another part of the CPU for further processing. The output may also include status flags indicating the result of the operation, such as overflow, carry, zero, or negative flags.
+
+Speed and Efficiency: ALUs are designed to perform operations quickly and efficiently, often using parallelism and pipelining techniques to maximize throughput. They are critical for the overall performance of the CPU, as many instructions executed by the CPU involve operations performed by the ALU.
+
 <p align ="center">
  <img src="https://github.com/GayazPatan/Images/assets/156210984/eeb3c389-f1cf-478a-99f3-d78ab34aef46" width="720px" height=auto />
 </p>
 
 Store unit
 
+A "store unit" in a computer architecture context typically refers to the component responsible for performing store or write operations to memory. It's a part of the memory subsystem of a CPU and is involved in transferring data from registers or caches to memory.The store unit plays a crucial role in the memory subsystem of a CPU, facilitating the efficient transfer of data between the CPU and memory. Its performance and reliability are essential for the overall system performance and data integrity.
+
 <p align ="center">
  <img src="https://github.com/GayazPatan/Images/assets/156210984/a3b1cdfa-335b-44ad-b994-fc91b3a81284" width="720px" height=auto />
 </p>
 
 
+Write Back
+In computer architecture, "write back" typically refers to a memory access strategy used in caching systems, particularly in the context of cache coherence protocols and CPU cache management.
+Cache Operation: In a CPU cache, data is typically stored in cache lines, each containing a block of memory. When the CPU reads data from memory, it first checks if the data is present in the cache. If the data is found in the cache (a cache hit), the CPU can retrieve it directly from the cache without accessing main memory, which is faster.
+
+Write Operations: When the CPU needs to write data to memory, it first checks if the corresponding cache line containing the memory location is present in the cache. If the data is already in the cache, the CPU can update the cache line directly without accessing main memory. However, instead of immediately updating the main memory, the CPU may choose to update the cache line and mark it as "dirty" to indicate that it has been modified.
 
 # OUTPUT
 
