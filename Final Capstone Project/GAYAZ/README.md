@@ -162,9 +162,15 @@ Speed and Efficiency: ALUs are designed to perform operations quickly and effici
  <img src="https://github.com/GayazPatan/Images/assets/156210984/eeb3c389-f1cf-478a-99f3-d78ab34aef46" width="720px" height=auto />
 </p>
 
-* <i><b>Store unit</i></b>
+* <i><b>Load unit</i></b>
 
- Load unit, also known as a load/store unit, is a component within a CPU responsible for handling load and store operations between the CPU and memory. Load operations involve transferring data from memory to CPU registers, while store operations involve transferring data from CPU registers to memory.
+ Load unit, also known as a load/store unit, is a component within a CPU responsible for handling load and store operations between the CPU and memory. Load operations involve transferring data from memory to CPU registers, while store operations involve transferring data from CPU registers to memory.Once the memory address is calculated, the load unit initiates a memory access operation to read or write data. This involves sending a request to the memory subsystem, specifying the memory address and the desired operation (read or write).The load unit is a critical component of the CPU's memory subsystem, responsible for efficiently transferring data between the CPU and memory. Its performance and efficiency significantly impact the overall performance of the CPU and system.
+
+
+
+
+
+
 
 * <i><b>Store unit</i></b>
 
