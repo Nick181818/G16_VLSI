@@ -87,7 +87,7 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
 
 # <i><b>OPERATION</i></b>
 
- * </i></b>PC Unit</i></b>:
+ * <i><b>PC Unit</i></b>:
 
 The Program Counter is a register in a CPU that stores the memory address of the next instruction to be fetched and executed. It keeps track of the current position in the program's execution sequence.
 <p align ="center">
