@@ -39,6 +39,9 @@ c.	dmdata_in: This is the 32-bit data read from dcache. During the Load.
 d.	dmdata_out: This is the 32-bit data to be written to dcache. During the Store.
 
 e.	dmwr_mask_out: This is a 4-bit mask signal that decides the bits to be masked during the dcache write operation.
+<p align ="center">
+ <img src="https://github.com/GayazPatan/Images/assets/156210984/4321b57c-188d-4883-b5cb-0f72436715a5" width="720px" height=auto />
+</p>
 
 # <i><b>INTRODUCTION</i></b>
 Computers are built on specific architectural designs that dictate how instructions are executed and processed. Two primary architectures exist: Complex Instruction Set Computer (CISC) and Reduced Instruction Set Computer (RISC).
