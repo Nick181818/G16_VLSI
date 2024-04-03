@@ -143,6 +143,7 @@ Shift and Masking: In some cases, the immediate generator may perform shifting o
 
 
 * <i><b>Decoder Unit</i></b>
+
 The decoder unit, also known as the instruction decoder, is a crucial component within the CPU that interprets and decodes instructions fetched from memory. Its primary function is to translate binary instructions into control signals that coordinate the operation of other CPU components, such as the ALU, registers, and memory units.The decoder unit receives the binary representation of instructions fetched from memory. It analyzes the opcode and any associated fields or parameters within the instruction to determine the type of operation to be performed and the operands involved.The decoder unit also plays a role in coordinating the sequencing of instructions within the CPU. It may generate signals to advance the Program Counter (PC) to the next instruction address, ensuring that instructions are executed in the correct sequence.
 
 * <i><b>ALU Unit</i></b>
