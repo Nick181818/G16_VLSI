@@ -67,15 +67,15 @@ RISC-V stands as a cutting-edge open-source instruction set architecture (ISA) t
 #### 	<i><b>Advantages of RISC-V</i></b>
 RISC-V stands as a beacon in modern computing due to its revolutionary features and adaptable nature, encompassing several advantages:
 
-*	Openness and Accessibility: RISC-V's open-source nature democratizes access to the ISA, enabling innovation without licensing fees or restrictions.
+*	<b>Openness and Accessibility</b>: RISC-V's open-source nature democratizes access to the ISA, enabling innovation without licensing fees or restrictions.
 
-*	Flexibility and Customizability: The modular design allows users to tailor solutions by incorporating custom instructions or extensions, fostering adaptability across diverse applications.
+*	<b>Flexibility and Customizability</b>: The modular design allows users to tailor solutions by incorporating custom instructions or extensions, fostering adaptability across diverse applications.
 
-*	Scalability and Versatility: Supporting various versions like RV32I, RV64I, and RV128I, RISC-V addresses different performance needs and computing environments.
+*	<b>Scalability and Versatility</b>: Supporting various versions like RV32I, RV64I, and RV128I, RISC-V addresses different performance needs and computing environments.
 
-*	Elegance and Simplicity: RISC-V's streamlined design emphasizes a reduced instruction set, enhancing predictability, ease of implementation, and efficiency.
+*	<b>Elegance and Simplicity</b>: RISC-V's streamlined design emphasizes a reduced instruction set, enhancing predictability, ease of implementation, and efficiency.
 	
-*	High Extensibility: A pivotal feature of RISC-V is its exceptional extensibility. This attribute enables users to expand the instruction set architecture by incorporating custom instructions or entire extensions. Its extensibility allows for the addition of new features, optimizations, and specialized functionalities, ensuring adaptability to evolving technological requirements and computing paradigms.
+*	<b>High Extensibility</b>: A pivotal feature of RISC-V is its exceptional extensibility. This attribute enables users to expand the instruction set architecture by incorporating custom instructions or entire extensions. Its extensibility allows for the addition of new features, optimizations, and specialized functionalities, ensuring adaptability to evolving technological requirements and computing paradigms.
 
  
 
