@@ -142,6 +142,9 @@ Shift and Masking: In some cases, the immediate generator may perform shifting o
 </p>
 
 
+* <i><b>Decoder Unit</i></b>
+The decoder unit, also known as the instruction decoder, is a crucial component within the CPU that interprets and decodes instructions fetched from memory. Its primary function is to translate binary instructions into control signals that coordinate the operation of other CPU components, such as the ALU, registers, and memory units.The decoder unit receives the binary representation of instructions fetched from memory. It analyzes the opcode and any associated fields or parameters within the instruction to determine the type of operation to be performed and the operands involved.The decoder unit also plays a role in coordinating the sequencing of instructions within the CPU. It may generate signals to advance the Program Counter (PC) to the next instruction address, ensuring that instructions are executed in the correct sequence.
+
 * <i><b>ALU Unit</i></b>
 The Arithmetic Logic Unit (ALU) is a fundamental component of a CPU responsible for performing arithmetic and logical operations on data. It's a combinational circuit that takes input data from registers, performs the specified operation, and produces the result.
 
@@ -156,6 +159,10 @@ Speed and Efficiency: ALUs are designed to perform operations quickly and effici
 <p align ="center">
  <img src="https://github.com/GayazPatan/Images/assets/156210984/eeb3c389-f1cf-478a-99f3-d78ab34aef46" width="720px" height=auto />
 </p>
+
+* <i><b>Store unit</i></b>
+
+ Load unit, also known as a load/store unit, is a component within a CPU responsible for handling load and store operations between the CPU and memory. Load operations involve transferring data from memory to CPU registers, while store operations involve transferring data from CPU registers to memory.
 
 * <i><b>Store unit</i></b>
 
