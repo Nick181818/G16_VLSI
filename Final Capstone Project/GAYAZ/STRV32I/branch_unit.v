@@ -3,7 +3,7 @@ module branch_unit
     input [31:0] rs1_in,
     input [31:0] rs2_in,
     input [4:0] opcode_6_2_in,
-    input [2:0] funct3_in,
+    input [2:0] func3_in,
     output branch_taken_out);
 
     reg branch_taken_out_net1;
@@ -15,7 +15,7 @@ module branch_unit
     
         else if(opcode_6_2_in==5'b11000)
         begin 
-            case(funct3_in)
+            case(func3_in)
                 3'b000: branch_taken_out_net1 = (rs1_in==rs2_in) ? 1 : 0; 
                 3'b001: branch_taken_out_net1 = (rs1_in!=rs2_in) ? 1 : 0; 
                 3'b010: branch_taken_out_net1 = 0;

@@ -28,7 +28,7 @@ module reg_block_2(
   output reg alu_src_reg_out,
   output reg [2:0] wb_mux_sel_reg_out,
   output reg imm_reg_out,
-  output reg rf_wr_en_reg
+  output reg rf_wr_en_reg_out
 
 );
   
@@ -49,7 +49,7 @@ module reg_block_2(
           alu_src_reg_out       <= alu_src_in;
           wb_mux_sel_reg_out    <= wb_mux_sel_in;
           imm_reg_out           <= imm_in;
-          rf_wr_en_reg          <= rf_wr_en; 
+          rf_wr_en_reg_out      <= rf_wr_en; 
         end 
       else 
         begin 
@@ -64,7 +64,7 @@ module reg_block_2(
           alu_src_reg_out       <= 1'b0;
           wb_mux_sel_reg_out    <= 3'b000;
           imm_reg_out           <= 1'b0;
-          rf_wr_en_reg          <= 1'b0; 
+          rf_wr_en_reg_out      <= 1'b0; 
         end 
     end 
   

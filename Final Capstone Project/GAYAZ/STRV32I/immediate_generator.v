@@ -1,8 +1,8 @@
 module immediate_generator(
   
-  input [31:7] instr_in,
+  input [31:0] instr_in,
   input [2:0] imm_type_in,
-  output reg [31:0] imm_out
+  output reg  imm_out
 
 );
   

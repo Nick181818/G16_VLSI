@@ -1,20 +1,20 @@
 module store_unit(
     input mem_wr_req,
-    input [1:0] funct3,
+    input [2:0] func3,
     input [31:0] iadder_in,
     input [31:0] rs2_in,
     output wire [31:0] dm_addr_out,
     output wire [31:0] dm_wr_req_out,
-    output reg [3:0] dm_wr_mask_out,
-    output reg [31:0] dm_data_out
+  output reg [3:0] dm_wr_mask_out,
+  output reg [31:0] dm_data_out
     );
   
   assign dm_addr_out = iadder_in;
   assign dm_wr_req_out = mem_wr_req;
   
-  always@(*)
+  always @ (*)
     begin 
-      case(funct3)
+      case(func3)
         2'b00: begin 
           case(iadder_in[1:0])
             2'b01: dm_data_out = {16'b0000_0000,16'b0000_0000,rs2_in[15:8],16'b0000_0000};
@@ -31,7 +31,7 @@ module store_unit(
   
   always@(*)
     begin 
-      case(funct3)
+      case(func3)
         2'b00: begin 
           case(iadder_in[1:0])
             2'b01: dm_wr_mask_out = {1'b0,1'b0,mem_wr_req,1'b0};

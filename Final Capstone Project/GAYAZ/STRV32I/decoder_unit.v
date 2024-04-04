@@ -1,6 +1,6 @@
 module decoder_unit (
     input func_7_5_in,
-    input [14:12] func_3_in,
+  input [14:12] func_3_in,
     input [6:2] opcode_in,
     output[2:0] wb_mux_sel_out,
     output[2:0] imm_type_out,
@@ -60,7 +60,7 @@ module decoder_unit (
 
     assign ALU_src_out = opcode_in [5]; 
         
-    assign idder_src_out = is_load | is_store | is_jalr;
+    assign iadder_src_out = is_load | is_store | is_jalr;
     
 
     assign wr_en_out = is_lui | is_auipc | is_jalr | is_jal | is_op | is_load |  is_op_imm;

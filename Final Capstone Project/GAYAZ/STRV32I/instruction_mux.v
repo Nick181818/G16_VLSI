@@ -2,13 +2,13 @@ module instruction_mux(
   
   input flush_in,
   input  [31:0] instr_in,
-  output reg [6:0] opcode_out,
+  output reg [4:0] opcode_out,
   output reg [2:0] func3_out,
   output reg [6:0] func7_out,
   output reg [4:0] rs1_addr_out,
   output reg [4:0] rs2_addr_out,
   output reg [4:0] rd_addr_out,
-  output reg [24:0] instr_31_7_out
+  output reg [31:0] instr_31_7_out
 
 
 );

@@ -1,7 +1,7 @@
 module immediate_adder(
   input [31:0] pc_in,
   input [31:0] rs1_in,
-  input [31:0] immd_in,
+  input  immd_in,
   input iadder_src,
   output [31:0] iadder_out
 );

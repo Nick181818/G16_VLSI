@@ -1,7 +1,7 @@
 module wb_mux(
   
   input alu_src_reg_in,
-  input [31:0] imm_reg_in,
+  input  imm_reg_in,
   input [31:0] rs2_reg_in,
   input [2:0] wb_mux_sel_reg_in,
   input [31:0] alu_result_in,

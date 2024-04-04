@@ -120,10 +120,6 @@ A write enable generator is a component within a computer system, often found in
 An immediate adder, also known as a constant adder or immediate arithmetic unit, is a component found within a CPU's arithmetic logic unit (ALU) that performs addition operations involving immediate values or constants.Immediate adders are commonly used in CPU architectures to perform arithmetic operations that involve immediate values, such as adding constants to variables or performing arithmetic with small fixed values. They play a crucial role in executing instructions efficiently, particularly in the context of arithmetic and logical operations with immediate operands.
 
 
-<p align ="center">
- <img src="https://github.com/GayazPatan/Images/assets/156210984/be1b8bff-7fd4-4169-83d0-d05f0fdfb885" width="720px" height=auto />
-</p>
-
 
 * <i><b>Immediate Generator</i></b>
 
@@ -137,9 +133,6 @@ Zero Extension: Similarly, for unsigned immediate values, the immediate generato
 
 Shift and Masking: In some cases, the immediate generator may perform shifting or masking operations to adjust the immediate value according to the instruction's requirements.
 
-<p align ="center">
- <img src="https://github.com/GayazPatan/Images/assets/156210984/4e1d433f-a822-4599-9a84-f2af6685f7e9" width="720px" height=auto />
-</p>
 
 
 * <i><b>Decoder Unit</i></b>
@@ -158,9 +151,6 @@ Output: After performing the operation, the ALU produces a result, which is typi
 
 Speed and Efficiency: ALUs are designed to perform operations quickly and efficiently, often using parallelism and pipelining techniques to maximize throughput. They are critical for the overall performance of the CPU, as many instructions executed by the CPU involve operations performed by the ALU.
 
-<p align ="center">
- <img src="https://github.com/GayazPatan/Images/assets/156210984/eeb3c389-f1cf-478a-99f3-d78ab34aef46" width="720px" height=auto />
-</p>
 
 * <i><b>Load unit</i></b>
 
@@ -176,9 +166,6 @@ Speed and Efficiency: ALUs are designed to perform operations quickly and effici
 
 A "store unit" in a computer architecture context typically refers to the component responsible for performing store or write operations to memory. It's a part of the memory subsystem of a CPU and is involved in transferring data from registers or caches to memory.The store unit plays a crucial role in the memory subsystem of a CPU, facilitating the efficient transfer of data between the CPU and memory. Its performance and reliability are essential for the overall system performance and data integrity.
 
-<p align ="center">
- <img src="https://github.com/GayazPatan/Images/assets/156210984/a3b1cdfa-335b-44ad-b994-fc91b3a81284" width="720px" height=auto />
-</p>
 
 
 * <i><b>Write Back</i></b>

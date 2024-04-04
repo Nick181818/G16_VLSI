@@ -3,7 +3,7 @@ module pc_unit(
   input   [1:0] pc_src_in,
   input   [31:0] pc_in,
   input   branch_take_in,
-  input   [30:0] iaddr_in,
+  input   [31:0] iaddr_in,
   output  [31:0] pc_mux_out,
   output  [31:0] pc_plus_4_out,
   output  [31:0] iaddr_out
@@ -20,7 +20,7 @@ module pc_unit(
   always @(*) 
   begin
     case(pc_src_in)
-    2'b00 : temp_pc_mux = 32'h00000013; // Boot Address
+    2'b00 : temp_pc_mux = 32'h00000000; // Boot Address
     2'b11 : temp_pc_mux = next_pc;
     default : temp_pc_mux = next_pc;
     endcase
