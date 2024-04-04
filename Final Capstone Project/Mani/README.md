@@ -29,7 +29,7 @@ Interface Details:
      |dmdata_out| output| [31:0]| Data output to dcache|
      |dmwr_mask_out| output| [3:0]| Mask bits to dcache|
   
- # Introduction
+ ## Introduction
 
  - RISC Processor 
     - RISC stands for Reduced Instruction Set Computer. In Reduced Instruction Set Computer (RISC) architecture, the instruction set of the computer is simplified to reduce the execution time. RISC has a small set of instructions, which generally include register-to-register operations.
@@ -42,7 +42,7 @@ Interface Details:
 
 ## Architecture of RISC-V processor
 
-<p align="center" >
+<p align="center">
  <img
 src="https://github.com/Maniteja-muriki/Image/issues/3"
 width="720px" Height="auto">
@@ -91,7 +91,7 @@ This block is responsible for retrieving the next instruction from the instructi
   
   - 10.Write enable generator:-
   It generates the write enable signals,which will decide whether we can access the register file for writing/updating any value.
-k
+
   - 11.Control Unit:-
  It has two states- Reset and Operation.If Reset=0,Controlunit operates in Operation mode and when Reset=1,it will be in reset state.
     - It flushes out the PC value in case of branch and jump instructions.
