@@ -220,32 +220,59 @@ I-type instructions typically have a fixed format that includes three fields:
 - Source Register: Specifies the register containing one of the operands.
 - Immediate Value: Specifies a constant value used as the other operand. This value is encoded directly within the instruction.
 - Destination Register: Specifies the register where the result of the operation will be stored.
-
-I-type instructions provide a convenient and efficient mechanism for incorporating immediate values into instruction execution within RISC architectures. They play a significant role in enabling a wide range of operations while maintaining simplicity and efficiency.
-
-
 <p align ="center">
  <img src="https://github.com/GayazPatan/Images/assets/156210984/dfb28c45-a9da-407c-a922-57173f3396a2" width="720px" height=auto />
 </p>
 
 *  <i><b>S-Type </i></b>
 
+S-type instructions, the source register contains the data to be stored in memory. The memory address is calculated by adding an immediate offset value to the contents of a base register. This offset value is typically a constant encoded within the instruction itself.
+
+S-type instructions include:
+
+- Store Word (SW): Stores a word-sized data value from a register into memory at the address calculated using a base register and an immediate offset.
+- Store Byte (SB): Stores a byte-sized data value from a register into memory at the address calculated using a base register and an immediate offset.
+- Store Halfword (SH): Stores a halfword-sized data value from a register into memory at the address calculated using a base register and an immediate offset.
+S-type instructions play a crucial role in enabling data transfer between registers and memory in RISC architectures, contributing to the efficiency and flexibility of program execution.
 
 <p align ="center">
  <img src="https://github.com/GayazPatan/Images/assets/156210984/dfcc355b-ca7d-4a6a-83b6-721eaba28747" width="720px" height=auto />
 </p>
 
 *  <i><b>B-Type </i></b>
+
+B-type instructions, also known as Branch-type instructions, are a specific type of instruction format commonly found in instruction sets. B-type instructions are primarily used for altering the control flow of a program by specifying branches or jumps to different locations in the instruction sequence.
+B-type instructions include:
+
+- Unconditional Branch (B): Transfers control to the specified target address unconditionally.
+- Conditional Branch (BEQ, BNE, BLT, etc.): Transfers control to the target address only if a certain condition is met (e.g., equality, inequality, less than).
+ B-type instructions are essential for controlling program flow and implementing branching and decision-making logic in computer programs. They play a crucial role in enabling the execution of complex algorithms and control structures in software.
+
 <p align ="center">
  <img src="https://github.com/GayazPatan/Images/assets/156210984/55243375-73ea-4892-aa0d-0542f00367f3" width="720px" height=auto />
 </p>
 
 * <i><b>J-Type </i></b>
+
+J-type instructions, also known as Jump-type instructions, are a specific type of instruction format commonly found in instruction sets. J-type instructions are primarily used for altering the control flow of a program by specifying unconditional jumps to different locations in the instruction sequence, typically to implement function calls, procedure returns, or long-distance branches.
+J-type instructions include:
+
+- Jump (J): Transfers control to the specified target address unconditionally. The target address is typically specified directly in the instruction.
+- Jump and Link (JAL): Transfers control to the specified target address and saves the return address (the address of the next instruction) in a dedicated register, allowing for function calls and procedure returns.
+J-type instructions are essential for controlling program flow and implementing jump and call operations in computer programs. They play a crucial role in enabling the execution of complex algorithms and control structures in software.
+
 <p align ="center">
  <img src="https://github.com/GayazPatan/Images/assets/156210984/6598d085-d010-473c-9bc0-b9fa3447f6f1" width="720px" height=auto />
 </p>
 
-* U-type
+* <i><b>U-type</i></b>
+
+U-type instructions, the immediate value field contains a large immediate value that serves as the target address for the jump operation. Unlike J-type instructions, U-type instructions do not specify the target address directly in memory but encode it within the instruction itself.
+ U-type instructions typically have a fixed format that includes two fields:
+
+- Opcode: Specifies the operation to be performed (e.g., unconditional jump).
+- Immediate Value: Specifies a large immediate value used as the target address for the jump. This value is encoded directly within the instruction itself.
+- Unconditional Jump (UJ): Transfers control to the specified target address unconditionally. The target address is encoded directly within the instruction using a large immediate value.
 <p align ="center">
  <img src="https://github.com/GayazPatan/Images/assets/156210984/c92f70a5-3d7f-4e5b-a928-5bb3577e30dc" width="720px" height=auto />
 </p>
