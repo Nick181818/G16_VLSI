@@ -4,6 +4,7 @@ RISC-V 32 is a version of the RISC-V instruction set architecture that operates 
 
 
 <i><b>
+
 # CONTENT
 * DESIGN SPECIFICATIONS
 * INTRODUCTION
@@ -184,14 +185,6 @@ Speed and Efficiency: ALUs are designed to perform operations quickly and effici
 
 A "store unit" in a computer architecture context typically refers to the component responsible for performing store or write operations to memory. It's a part of the memory subsystem of a CPU and is involved in transferring data from registers or caches to memory.The store unit plays a crucial role in the memory subsystem of a CPU, facilitating the efficient transfer of data between the CPU and memory. Its performance and reliability are essential for the overall system performance and data integrity.
 
-
-
-* <i><b>Write Back</i></b>
-
-In computer architecture, "write back" typically refers to a memory access strategy used in caching systems, particularly in the context of cache coherence protocols and CPU cache management.
-Cache Operation: In a CPU cache, data is typically stored in cache lines, each containing a block of memory. When the CPU reads data from memory, it first checks if the data is present in the cache. If the data is found in the cache (a cache hit), the CPU can retrieve it directly from the cache without accessing main memory, which is faster.
-
-Write Operations: When the CPU needs to write data to memory, it first checks if the corresponding cache line containing the memory location is present in the cache. If the data is already in the cache, the CPU can update the cache line directly without accessing main memory. However, instead of immediately updating the main memory, the CPU may choose to update the cache line and mark it as "dirty" to indicate that it has been modified.
 
 # <i><b> OUTPUT</i></b>
 
