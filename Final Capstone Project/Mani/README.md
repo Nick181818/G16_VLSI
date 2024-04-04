@@ -41,7 +41,7 @@ Interface Details:
 
 ## Architecture of RISC-V processor
 
-<palign= "center" >
+<p align="center" >
  <img
 src="https://github.com/Maniteja-muriki/Image/issues/3"
 width="720px" Height="auto">
@@ -73,7 +73,7 @@ This block is responsible for retrieving the next instruction from the instructi
  - 6.ALU unit:-
  This block executes the instruction. Arithmetic and logical operations are performed here. If the instruction is a branch, the EX block evaluates the branch condition and calculates the new PC value if needed.
 
- <p align = "center">
+ <p align="center">
   <img
   src="https://github.com/Maniteja-muriki/Image/issues/2"
   width="720px"Height="auto">
