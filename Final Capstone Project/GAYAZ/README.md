@@ -39,9 +39,6 @@ Design a 3-stage pipelined RISC-V processor that works on RV32I ISA.
 +	dmdata_out: This is the 32-bit data to be written to dcache. During the Store.
 
 +	dmwr_mask_out: This is a 4-bit mask signal that decides the bits to be masked during the dcache write operation.
-<p align ="center">
- <img src="https://github.com/GayazPatan/Images/assets/156210984/4321b57c-188d-4883-b5cb-0f72436715a5" width="720px" height=auto />
-</p>
 
 ####  Input And Output Description
 |Port name |Direction|Type|Description|
@@ -65,6 +62,9 @@ RISC architecture, on the contrary, focuses on a reduced set of simple instructi
 RISC architectures prioritize efficiency by favoring a smaller set of instructions, emphasizing faster instruction execution, and enabling better pipelining and parallelism. Notable RISC architectures include ARM and MIPS.
 
 RISC-V stands as a cutting-edge open-source instruction set architecture (ISA) that embodies simplicity, adaptability, and versatility. Developed at the University of California, Berkeley, the RISC-V ISA was introduced in 2010 as an academic project aiming to address the limitations of existing architectures and provide a platform for innovation in computer architecture.
+<p align ="center">
+ <img src="https://github.com/GayazPatan/Images/assets/156210984/4321b57c-188d-4883-b5cb-0f72436715a5" width="720px" height=auto />
+</p>
 
  #### <i><b>RISC architecture consists of a series of stages that an instruction goes through during its execution:</i></b>
 1.	<i><b>Instruction Fetch</i></b>: The CPU fetches the instruction from memory.
