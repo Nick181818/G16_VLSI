@@ -6,14 +6,14 @@
 
 
 <h3 align="center">SURE Trust - Skill Upgradation for Rural-youth Empowerment Trust</h3>
-  <h2>Course Name</h2>
+  <h2>G16 - VLSI</h2>
 </div>
 
 # Course Report
 
-## Name: [Your Name]
+## Name: Mohammed Touheed
 
-## Qualifications: [Your Qualifications]
+## Qualifications: B.Tech Final Year
 
 Welcome to the course report for the [Course Name]! This README document provides an overview of the course, its mini projects and final project.
 
