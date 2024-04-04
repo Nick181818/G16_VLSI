@@ -114,9 +114,6 @@ The Program Counter is a register in a CPU that stores the memory address of the
 
 <b>Interrupts and Exceptions</b>: When handling interrupts or exceptions, the Program Counter may be saved or modified to ensure proper program execution after the interrupt is serviced.
 
-* <i><b>Reg files</i></b>
-
-Register files are essential components of CPUs, storing data temporarily in fast, small memory locations called registers. These files hold operands for arithmetic and logical operations, enabling efficient data access and transfer within the CPU core. Special-purpose registers and advanced techniques like register renaming enhance CPU performance and flexibility. During context switching, register contents are saved and restored, ensuring seamless program execution. Overall, register files play a vital role in optimizing CPU efficiency and speed.
 
 * <i><b>Branch Unit</i></b>
 
