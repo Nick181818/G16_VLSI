@@ -110,9 +110,6 @@ An instruction multiplexer (mux) is a component within a CPU's control unit resp
 
 A write enable generator is a component within a computer system, often found in memory and input/output (I/O) interfaces, that generates signals to control when data can be written to a specific location in memory or when output data can be enabled for transmission.The write enable generator plays a crucial role in coordinating write operations in computer systems, ensuring that data is written or output only when appropriate and in a manner consistent with the system's operation.
 
-<p align ="center">
- <img src="https://github.com/GayazPatan/Images/assets/156210984/2fc9efe2-518d-466a-aa16-bd1fa1ac3784" width="720px" height=auto />
-</p>
 
 
 * <i><b>Immediate Adder</i></b>
