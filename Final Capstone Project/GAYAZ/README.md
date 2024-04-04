@@ -196,16 +196,41 @@ Write Operations: When the CPU needs to write data to memory, it first checks if
 # <i><b> OUTPUT</i></b>
 
 *  <i><b>R-Type </i></b>
+R-type instructions operate on data stored in registers rather than directly on memory locations. The source registers provide the operands for the operation, and the result is stored in the destination register.
+
+R-type instructions have a fixed format that typically includes three fields:
+
+- Opcode: Specifies the operation to be performed (e.g., addition, subtraction, bitwise AND).
+- Source Register 1: Specifies the register containing the first operand.
+- Source Register 2: Specifies the register containing the second operand.
+- Destination Register: Specifies the register where the result of the operation will be stored.
+R-type instructions are a fundamental aspect of RISC architectures, providing a streamlined and efficient mechanism for performing arithmetic and logical operations on data stored in registers. They play a central role in the design and implementation of RISC-based CPUs.
+
+
 <p align ="center">
  <img src="https://github.com/GayazPatan/Images/assets/156210984/fbeffdbb-717f-4b36-aad4-7b20a4092d91" width="720px" height=auto />
 </p>
 
 *  <i><b>I-Type </i></b>
+
+I-type instructions, one operand is typically a value stored in a register, while the other operand is an immediate value encoded within the instruction itself. This immediate value is often used as a constant offset, address, or data value.
+I-type instructions typically have a fixed format that includes three fields:
+
+- Opcode: Specifies the operation to be performed (e.g., load, store, arithmetic, logical).
+- Source Register: Specifies the register containing one of the operands.
+- Immediate Value: Specifies a constant value used as the other operand. This value is encoded directly within the instruction.
+- Destination Register: Specifies the register where the result of the operation will be stored.
+
+I-type instructions provide a convenient and efficient mechanism for incorporating immediate values into instruction execution within RISC architectures. They play a significant role in enabling a wide range of operations while maintaining simplicity and efficiency.
+
+
 <p align ="center">
  <img src="https://github.com/GayazPatan/Images/assets/156210984/dfb28c45-a9da-407c-a922-57173f3396a2" width="720px" height=auto />
 </p>
 
 *  <i><b>S-Type </i></b>
+
+
 <p align ="center">
  <img src="https://github.com/GayazPatan/Images/assets/156210984/dfcc355b-ca7d-4a6a-83b6-721eaba28747" width="720px" height=auto />
 </p>
