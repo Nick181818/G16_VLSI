@@ -18,27 +18,27 @@ Design a 3-stage pipelined RISC-V processor that works on RV32I ISA.
 
 1. Interface:
 
-a.	clk_in: System clock.
++	clk_in: System clock.
 
-b.	rst_in: Active high and synchronous system reset.
++	rst_in: Active high and synchronous system reset.
 
 2.	Instruction Cache Interface:
 
-a.	imaddr_out: Carries 32-bit target address to icache.
++	imaddr_out: Carries 32-bit target address to icache.
 
-b.	instr_in: 32-bit instruction fetched from icache.
++	instr_in: 32-bit instruction fetched from icache.
 
 3.	Data Cache Interface:
 
-a.	dmwr_req_out: Write request signal to dcache, when high indicates a write request to dcache while being low it indicates a read request. This is a single bit signal.
++	dmwr_req_out: Write request signal to dcache, when high indicates a write request to dcache while being  low it indicates a read request. This is a single bit signal.
 
-b.	dmaddr_out: Carries the 32-bit target(read/write) address to dcache.
++	dmaddr_out: Carries the 32-bit target(read/write) address to dcache.
 
-c.	dmdata_in: This is the 32-bit data read from dcache. During the Load.
++	dmdata_in: This is the 32-bit data read from dcache. During the Load.
 
-d.	dmdata_out: This is the 32-bit data to be written to dcache. During the Store.
++	dmdata_out: This is the 32-bit data to be written to dcache. During the Store.
 
-e.	dmwr_mask_out: This is a 4-bit mask signal that decides the bits to be masked during the dcache write operation.
++	dmwr_mask_out: This is a 4-bit mask signal that decides the bits to be masked during the dcache write operation.
 <p align ="center">
  <img src="https://github.com/GayazPatan/Images/assets/156210984/4321b57c-188d-4883-b5cb-0f72436715a5" width="720px" height=auto />
 </p>
@@ -90,9 +90,16 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
  * <i><b>PC Unit</i></b>:
 
 The Program Counter is a register in a CPU that stores the memory address of the next instruction to be fetched and executed. It keeps track of the current position in the program's execution sequence.
-<p align ="center">
- <img src="https://github.com/GayazPatan/Images/assets/156210984/bd0a19ad-5370-4b72-bf24-dd0e57978321" width="720px" height=auto />
-</p>
+<b>Fetching Instructions</b>: The Program Counter unit is responsible for fetching instructions from memory. It retrieves the instruction located at the memory address stored in the Program Counter register.
+
+<b>Incrementing</b>: After fetching an instruction, the Program Counter is typically incremented to point to the next instruction in memory. This prepares it to fetch the next instruction in the sequence.
+
+<b>Branching</b>: During program execution, control flow instructions such as branches (conditional or unconditional) may alter the flow of execution. In such cases, the Program Counter is updated to point to a different memory address based on the branch condition or target address.
+
+<b>Jumping</b>: Jump instructions, which transfer control to a different part of the program, also involve modifying the Program Counter. The new memory address to jump to is typically loaded into the Program Counter, redirecting the execution flow.
+
+<b>Interrupts and Exceptions</b>: When handling interrupts or exceptions, the Program Counter may be saved or modified to ensure proper program execution after the interrupt is serviced.
+
 
 * <i><b>Branch Unit</i></b>
 
