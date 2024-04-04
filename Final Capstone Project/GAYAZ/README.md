@@ -43,7 +43,21 @@ Design a 3-stage pipelined RISC-V processor that works on RV32I ISA.
  <img src="https://github.com/GayazPatan/Images/assets/156210984/4321b57c-188d-4883-b5cb-0f72436715a5" width="720px" height=auto />
 </p>
 
+####  Input And Output Description
+|Port name |Direction|Type|Description|
+|---|---|---|---|
+|clk_in|input| |System Clock|
+|rst_in|input| |System Reset|
+|dmdata_in|input| [31:0]| Data input from dcache|
+|instr_in|input| [31:0]|Instruction input from icache|
+|dmwr_req_out|output| |Write request to dcache|
+|imaddr_out|output| [31:0]|Address output to icache|
+|dmaddr_out|output| [31:0]|Address output to dcache|
+|dmwr_mask_out|output | [3:0]| Mask bits to dcache|
+|dmdata_out|output| [31:0]|Data output to dcache|
+
 # <i><b>INTRODUCTION</i></b>
+
 Computers are built on specific architectural designs that dictate how instructions are executed and processed. Two primary architectures exist: Complex Instruction Set Computer (CISC) and Reduced Instruction Set Computer (RISC).
 
 <i><b> RISC (Reduced Instruction Set Computer)</i></b>
