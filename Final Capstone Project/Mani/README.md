@@ -18,6 +18,7 @@ Interface Details:
     - e)dmwr_mask_out : This is a 4-bit mask signal that decides the bits to be masked during the dcache write operation.
 
      | Port name | Direction | Type | Description|
+     |:------------------|:----------------------|:----------------------|
      |clk_in | input|    | System clock|
      |rst_in | input|    | System reset|
      |dmdata_in| input| [31:0]| Data input from dcache|
