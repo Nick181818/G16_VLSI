@@ -193,6 +193,36 @@ Cache Operation: In a CPU cache, data is typically stored in cache lines, each c
 
 Write Operations: When the CPU needs to write data to memory, it first checks if the corresponding cache line containing the memory location is present in the cache. If the data is already in the cache, the CPU can update the cache line directly without accessing main memory. However, instead of immediately updating the main memory, the CPU may choose to update the cache line and mark it as "dirty" to indicate that it has been modified.
 
-# OUTPUT
+# <i><b> OUTPUT</i></b>
 
-# WAVEFORM
+*  <i><b>R-Type </i></b>
+<p align ="center">
+ <img src="https://github.com/GayazPatan/Images/assets/156210984/fbeffdbb-717f-4b36-aad4-7b20a4092d91" width="720px" height=auto />
+</p>
+
+*  <i><b>I-Type </i></b>
+<p align ="center">
+ <img src="https://github.com/GayazPatan/Images/assets/156210984/dfb28c45-a9da-407c-a922-57173f3396a2" width="720px" height=auto />
+</p>
+
+*  <i><b>S-Type </i></b>
+<p align ="center">
+ <img src="https://github.com/GayazPatan/Images/assets/156210984/dfcc355b-ca7d-4a6a-83b6-721eaba28747" width="720px" height=auto />
+</p>
+
+*  <i><b>B-Type </i></b>
+<p align ="center">
+ <img src="https://github.com/GayazPatan/Images/assets/156210984/55243375-73ea-4892-aa0d-0542f00367f3" width="720px" height=auto />
+</p>
+
+* <i><b>J-Type </i></b>
+<p align ="center">
+ <img src="https://github.com/GayazPatan/Images/assets/156210984/6598d085-d010-473c-9bc0-b9fa3447f6f1" width="720px" height=auto />
+</p>
+
+* U-type
+<p align ="center">
+ <img src="https://github.com/GayazPatan/Images/assets/156210984/c92f70a5-3d7f-4e5b-a928-5bb3577e30dc" width="720px" height=auto />
+</p>
+
+
