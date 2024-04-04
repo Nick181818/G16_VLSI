@@ -169,6 +169,8 @@ The Program Counter is a register in a CPU that stores the memory address of the
 One of the key functions of the branch unit is to predict the outcome of branch instructions before their execution. This prediction is based on various factors, such as the history of previous branches, the program counter (PC), and branch history tables. Predicting whether a branch will be taken (i.e., the condition will evaluate to true) or not taken (i.e., the condition will evaluate to false) is crucial for minimizing pipeline stalls and improving performance.When a branch instruction is encountered, the branch unit calculates the target address of the branch. This target address determines the location in the instruction stream where program execution will continue after the branch is resolved.
 
 #### Block Diagram
+
+
 <p align ="center">
  <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/97d95453-5d7a-4986-8204-147880c82ca5" width="720px" height=auto />
 </p>
@@ -179,6 +181,8 @@ One of the key functions of the branch unit is to predict the outcome of branch 
 The Control Unit (CU) is a core component of the Central Processing Unit (CPU) responsible for coordinating and directing the operation of the entire processor. It interprets and executes instructions, directing the flow of data between the CPU's various functional units and external devices. The primary functions of the control unit include instruction decoding, instruction sequencing, and generating control signals to coordinate the operation of other CPU components.
 
 #### Block Diagram
+
+
 <p align ="center">
  <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/f381bc50-e0c9-49d5-bbe1-b10ca96ca7cd" width="720px" height=auto />
 </p>
@@ -189,6 +193,8 @@ The Control Unit (CU) is a core component of the Central Processing Unit (CPU) r
 An instruction multiplexer (mux) is a component within a CPU's control unit responsible for selecting the next instruction to be executed from among multiple possible sources. It plays a crucial role in directing the flow of instruction execution within the CPU.Instruction muxes are often used at various stages of the CPU's instruction pipeline to select the appropriate instruction for each pipeline stage. This helps ensure that instructions are fetched and processed efficiently, minimizing pipeline stalls and improving overall CPU performance.
 
 #### Block Diagram
+
+
 <p align ="center">
  <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/e1e1201b-7418-4a42-949b-03e398055530
  " width="720px" height=auto />
@@ -200,6 +206,8 @@ An instruction multiplexer (mux) is a component within a CPU's control unit resp
 A write enable generator is a component within a computer system, often found in memory and input/output (I/O) interfaces, that generates signals to control when data can be written to a specific location in memory or when output data can be enabled for transmission.The write enable generator plays a crucial role in coordinating write operations in computer systems, ensuring that data is written or output only when appropriate and in a manner consistent with the system's operation.
 
 #### Block Diagram
+
+
 <p align ="center">
  <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/3553ddfb-46ec-4247-b4f1-846d79054dc3" width="720px" height=auto />
 </p>
@@ -210,6 +218,8 @@ A write enable generator is a component within a computer system, often found in
 An immediate adder, also known as a constant adder or immediate arithmetic unit, is a component found within a CPU's arithmetic logic unit (ALU) that performs addition operations involving immediate values or constants.Immediate adders are commonly used in CPU architectures to perform arithmetic operations that involve immediate values, such as adding constants to variables or performing arithmetic with small fixed values. They play a crucial role in executing instructions efficiently, particularly in the context of arithmetic and logical operations with immediate operands.
 
 #### Block Diagram
+
+
 <p align ="center">
  <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/ae0b8478-df18-4a32-816e-c764c85724b6" width="720px" height=auto />
 </p>
@@ -228,6 +238,8 @@ Zero Extension: Similarly, for unsigned immediate values, the immediate generato
 Shift and Masking: In some cases, the immediate generator may perform shifting or masking operations to adjust the immediate value according to the instruction's requirements.
 
 #### Block Diagram
+
+
 <p align ="center">
  <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/0152b296-7488-46b2-a242-2fbe80d389ae" width="720px" height=auto />
 </p>
@@ -245,6 +257,8 @@ Output: After performing the operation, the ALU produces a result, which is typi
 Speed and Efficiency: ALUs are designed to perform operations quickly and efficiently, often using parallelism and pipelining techniques to maximize throughput. They are critical for the overall performance of the CPU, as many instructions executed by the CPU involve operations performed by the ALU.
 
 #### Block Diagram
+
+
 <p align ="center">
  <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/09754fea-7aeb-4d69-8574-5588c6f79217
  " width="720px" height=auto />
@@ -272,6 +286,7 @@ Cache Operation: In a CPU cache, data is typically stored in cache lines, each c
 Write Operations: When the CPU needs to write data to memory, it first checks if the corresponding cache line containing the memory location is present in the cache. If the data is already in the cache, the CPU can update the cache line directly without accessing main memory. However, instead of immediately updating the main memory, the CPU may choose to update the cache line and mark it as "dirty" to indicate that it has been modified.
 
 #### Block Diagram
+
 <p align ="center">
  <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/271fe94e-08cf-4d84-bd00-12675dd7fc65" width="720px" height=auto />
 </p>
@@ -321,7 +336,7 @@ Write Operations: When the CPU needs to write data to memory, it first checks if
         
       - Tool Simulation:
 
-       <p align ="center">
+    <p align ="center">
  <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/6a0518be-b13e-4db1-a781-a7a4be69dbe7" width="720px" height=auto />
 </p>
 
