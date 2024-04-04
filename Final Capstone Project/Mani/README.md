@@ -17,17 +17,17 @@ Interface Details:
     - d)dmdata_out : This is the 32-bit to be written to dcache.During the "Store".
     - e)dmwr_mask_out : This is a 4-bit mask signal that decides the bits to be masked during the dcache write operation.
 
-    - | Port name | Direction | Type | Description|
-    - |clk_in | input|    | System clock|
-    - |rst_in | input|    | System reset|
-    - |dmdata_in| input| [31:0]| Data input from dcache|
-    - |instr_in| input| [31:0]|  Instruction input from icache|
-    - |dmwr_req_out| output| | Write request to dcache|
-    - |imaddr_out| output| [31:0]| Address output to icache|
-    - |dmaddr_out| output| [31:0]| Address output to dcache|
-    - |dmdata_out| output| [31:0]| Data output to dcache|
-    - |dmwr_mask_out| output| [3:0]| Mask bits to dcache|
-
+     | Port name | Direction | Type | Description|
+     |clk_in | input|    | System clock|
+     |rst_in | input|    | System reset|
+     |dmdata_in| input| [31:0]| Data input from dcache|
+     |instr_in| input| [31:0]|  Instruction input from icache|
+     |dmwr_req_out| output| | Write request to dcache|
+     |imaddr_out| output| [31:0]| Address output to icache|
+     |dmaddr_out| output| [31:0]| Address output to dcache|
+     |dmdata_out| output| [31:0]| Data output to dcache|
+     |dmwr_mask_out| output| [3:0]| Mask bits to dcache|
+  
  # Introduction
 
  - RISC Processor 
