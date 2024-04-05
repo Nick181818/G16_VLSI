@@ -334,7 +334,7 @@ The U-Type instructions in RISC-V architecture are designed for unconditional im
     - In the third cycle, the data is sent to on-chip registers for storage.
 
 <p align ="center">
- <img src="https://github.com/GayazPatan/Images/assets/156210984/c92f70a5-3d7f-4e5b-a928-5bb3577e30dc" width="720px" height=auto />
+ <img src="https://github.com/GayazPatan/Images/assets/156210984/4dd044f5-2490-491e-bd35-6d908f796d90" width="720px" height=auto />
 </p>
 
 
