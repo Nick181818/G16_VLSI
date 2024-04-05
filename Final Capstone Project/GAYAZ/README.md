@@ -103,67 +103,67 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
 
  * <i><b>PC Unit</i></b>:
 
-- The PC unit, or Program Counter unit, manages the program counter, a register that holds the memory address of the next instruction to be fetched, facilitating sequential instruction execution and control flow management.
+  - The PC unit, or Program Counter unit, manages the program counter, a register that holds the memory address of the next instruction to be fetched, facilitating sequential instruction execution and control flow management.
 
 * <i><b>Branch Unit</i></b>
 
-- The branch unit in RISC-V handles branch instructions, predicting branch outcomes and calculating branch targets, crucial for controlling program flow and minimizing pipeline stalls.
+  - The branch unit in RISC-V handles branch instructions, predicting branch outcomes and calculating branch targets, crucial for controlling program flow and minimizing pipeline stalls.
 
 * <i><b>Control unit</i></b>
 
-- The control unit in a CPU coordinates instruction execution, generating control signals to manage data flow between CPU components, decoding instructions, and directing operations such as arithmetic and logical calculations.
-- It oversees the fetch-decode-execute cycle, ensuring efficient processing and proper sequencing of instructions.
+  - The control unit in a CPU coordinates instruction execution, generating control signals to manage data flow between CPU components, decoding instructions, and directing operations such as arithmetic and logical calculations.
+  - It oversees the fetch-decode-execute cycle, ensuring efficient processing and proper sequencing of instructions.
 
 * <i><b>Instruction Unit</i></b>
 
-- The instruction unit is responsible for fetching instructions from memory, decoding them, and passing them to the appropriate execution units within the CPU for processing. 
-- It manages the instruction pipeline, ensuring smooth and efficient operation of the CPU.
+  - The instruction unit is responsible for fetching instructions from memory, decoding them, and passing them to the appropriate execution units within the CPU for processing. 
+  - It manages the instruction pipeline, ensuring smooth and efficient operation of the CPU.
 
 
 * <i><b>Write Enable Generator</i></b>
 
-- Write enable generator is a component within a memory system that generates control signals to enable or disable write operations to specific memory locations.
-- It interprets commands from the CPU or other controlling units and generates the necessary signals to allow data to be written into the designated memory cells while ensuring data integrity and consistency.
+  - Write enable generator is a component within a memory system that generates control signals to enable or disable write operations to specific memory locations.
+  - It interprets commands from the CPU or other controlling units and generates the necessary signals to allow data to be written into the designated memory cells while ensuring data integrity and consistency.
 
 * <i><b>Immediate Adder</i></b>
 
-- Immediate adder is a component within a CPU's arithmetic logic unit (ALU) that performs addition operations involving immediate values. 
-- It adds a constant value, often encoded directly within the instruction, to the contents of a register or memory location. 
-- This operation is commonly used in instruction execution for arithmetic calculations, memory address computation, and branch target calculation in various processor architectures.
+  - Immediate adder is a component within a CPU's arithmetic logic unit (ALU) that performs addition operations involving immediate values. 
+  - It adds a constant value, often encoded directly within the instruction, to the contents of a register or memory location. 
+  - This operation is commonly used in instruction execution for arithmetic calculations, memory address computation, and branch target calculation in various processor architectures.
 
 
 * <i><b>Immediate Generator</i></b>
 
-- An immediate generator is a CPU component that creates constant values directly encoded within instructions, used for operations like arithmetic, memory addressing, or branching.
+  - An immediate generator is a CPU component that creates constant values directly encoded within instructions, used for operations like arithmetic, memory addressing, or branching.
 
 
 * <i><b>Decoder Unit</i></b>
 
-- The decoder unit interprets binary instructions fetched from memory, determining the operation to be performed and the operands involved.
+  - The decoder unit interprets binary instructions fetched from memory, determining the operation to be performed and the operands involved.
 
-- It translates decoded instructions into control signals, coordinating the actions of other CPU components to execute the instruction effectively.
+  - It translates decoded instructions into control signals, coordinating the actions of other CPU components to execute the instruction effectively.
 
 
 * <i><b>ALU Unit</i></b>
 
-- The ALU (Arithmetic Logic Unit) in RISC-V performs arithmetic and logical operations on data.
+  - The ALU (Arithmetic Logic Unit) in RISC-V performs arithmetic and logical operations on data.
 
-- It supports basic arithmetic operations such as addition, subtraction, multiplication, and division, as well as logical operations like AND, OR, XOR, and shifting.
+  - It supports basic arithmetic operations such as addition, subtraction, multiplication, and division, as well as logical operations like AND, OR, XOR, and shifting.
 
-- The ALU operates on data from registers or immediate values, generating results based on control signals provided by the CPU's control unit.
+  - The ALU operates on data from registers or immediate values, generating results based on control signals provided by the CPU's control unit.
 
 
 * <i><b>Load unit</i></b>
 
-- The load unit in RISC-V is responsible for loading data from memory into CPU registers, typically used for accessing variables or data structures stored in memory.
+  - The load unit in RISC-V is responsible for loading data from memory into CPU registers, typically used for accessing variables or data structures stored in memory.
 
-- It calculates memory addresses based on operands and immediate values, initiates memory access operations, and transfers the retrieved data into the specified CPU registers for further processing.
+  - It calculates memory addresses based on operands and immediate values, initiates memory access operations, and transfers the retrieved data into the specified CPU registers for further processing.
 
 * <i><b>Store unit</i></b>
 
-- In RISC-V, the store unit is responsible for transferring data from CPU registers to memory locations specified by the instruction, typically used for storing variables or updating data structures in memory.
+  - In RISC-V, the store unit is responsible for transferring data from CPU registers to memory locations specified by the instruction, typically used for storing variables or updating data structures in memory.
 
-- It calculates memory addresses based on operands and immediate values, initiates memory write operations, and transfers the data from the specified CPU registers to the corresponding memory locations.
+  - It calculates memory addresses based on operands and immediate values, initiates memory write operations, and transfers the data from the specified CPU registers to the corresponding memory locations.
 
 # <i><b> OUTPUT</i></b>
 
