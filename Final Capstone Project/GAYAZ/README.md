@@ -209,18 +209,18 @@ I-type instructions execute operations like immediate arithmetic (addition, subt
       - Description: The contents of register x11 and immediate value 2 are to be added and stored back to the x10 register.
 
     - As per the ISA,
-      - Hex equivalent: 00d60e33
-      - Bin equivalent: 00000000110101100000111000110011
-      - Opcode: 011_0011
+    - Hex equivalent: 00258513
+      - Bin equivalent: 00000000001001011000010100010011
+      - Opcode: 001_0011
       - funct3: 3’b000
       - funct7: 7’b000_0000
-      - rs1_addr: 5’hC
-      - rs2_addr: 5’hD
-      - rd_addr: 5’h1C
+      - rs1_addr: 5’hB
+      - rs2_addr: (ignorable)
+      - rd_addr: 5’hA
       - The instruction has been stored at memory location: 40 (or 28H)
-      - Machine cycles taken: 1       
+      - Machine cycles taken: 1         
       - No. of clock cycles: 3
-       
+           
   -  Working:
       
       - In the first cycle, the address from the processor is sent to the icache and instruction reaches the processor in the second cycle.
@@ -241,17 +241,6 @@ I-type instructions execute operations like immediate arithmetic (addition, subt
       - Description: The contents of register x12 are stored to data memory(dcache) via the store unit. Since this is sh instruction, only half word is loaded to the memory location [6H + [x10]], content of [x10] in this case is 2H. Hence, the destination address in this case is 8H.
 
     - As per the ISA,
-        - Hex equivalent: 00258513
-        - Bin equivalent: 00000000001001011000010100010011
-        - Opcode: 001_0011
-        - funct3: 3’b000
-        - funct7: 7’b000_0000
-        - rs1_addr: 5’hB
-        - rs2_addr: (ignorable)
-        - rd_addr: 5’hA
-        - The instruction has been stored at memory location: 40 (or 28H)
-        - Machine cycles taken: 1         
-        - No. of clock cycles: 3
          
     - Working:
         
