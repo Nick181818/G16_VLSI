@@ -91,13 +91,19 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
 	
 *	<b>High Extensibility</b>: A pivotal feature of RISC-V is its exceptional extensibility. This attribute enables users to expand the instruction set architecture by incorporating custom instructions or entire extensions. Its extensibility allows for the addition of new features, optimizations, and specialized functionalities, ensuring adaptability to evolving technological requirements and computing paradigms.
 
- 
+# <i><b>Advantages of 3-stage pipelined</i></b>
 
-# <i><b>STRV32I STRCUTURE</i></b>
+<b>Improved Throughput</b>:Throughput can be increased by processing numerous instructions at once using pipelining. A three-stage pipeline allows the processor to process one instruction at a time by separating instructions into phases called fetch, decode, and execute. This increases the processor's throughput overall by allowing the next instruction to be retrieved and decoded while the previous instruction is being processed.
 
-<p align ="center">
- <img src="https://github.com/GayazPatan/Images/assets/156210984/7d9e10a2-418e-4214-86ed-4e2cbb0f1953" width="720px" height=auto />
-</p>
+<b>Reduced Cycle Time</b>:Reducing the processor cycle time can be achieved by segmenting the execution of one instruction into many steps. Every stage has a set duration, and as soon as one instruction moves on to the next, the processor can begin carrying out the subsequent one. This allows instructions to be executed more quickly than in non-pipelined architectures.
+
+<b>Simpler Control Logic</b>:Three-stage pipelining streamlines the processor's control logic. It is simpler to develop and implement the processor when each stage functions independently and has its own control unit. Because of its simplicity, there is less complexity, less power usage, and possibly even faster clock speeds.
+
+<b>Better Resource Utilization</b>:Pipelining makes it possible to use hardware resources more effectively. Other stages can work on succeeding instructions while the execute stage is working on one instruction at a time. Better overall performance results from the processor's resources being fully used thanks to this overlapping of instruction execution.
+
+<b>Scalability</b>: Pipelining offers a scalable method for designing processors. It gets simpler to control the complexity of instruction execution as processor complexity rises and pipeline stages multiply. The capacity to scale allows for the creation of processors with increased efficiency and performance.
+
+
 
 # <i><b>OPERATION</i></b>
 
@@ -135,31 +141,193 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
 # <i><b> OUTPUT</i></b>
 
 *  <i><b>R-Type </i></b>
+ - R-type instructions involve operation between two operands stored in two on-chip registers. The fetched instruction should provide the address to the two operands and help the processor to decode the type of operation to be performed.
+
+     - **EXAMPLE**
+       - Instruction: add x28, x12, x13
+        - Description: The contents of register x1 and x12 are to be added and stored back to the x2 register.
+
+     - As per the ISA,
+        - Hex equivalent: 00d60e33
+        - Bin equivalent: 00000000110101100000111000110011
+        - Opcode: 011_0011
+        - funct3: 3’b000
+        - funct7: 7’b000_0000        
+        - rs1_addr: 5’hC         
+        - rs2_addr: 5’hd         
+        - rd_addr: 5’h1C        
+        - The instruction has been stored at memory location: 40 (or 28H)        
+        - Machine cycles taken: 1
+        - No. of clock cycles: 3
+
+     - Working:
+         
+        - In the first cycle, the address from the processor is sent to the icache and instruction reaches the processor in the second cycle.
+        - In next cycle, the instruction is decoded and data is read from the on-chip registers
+        - In the third cycle, the addition is performed and data is sent to on-chip registers for storage.
+        
+   
 <p align ="center">
  <img src="https://github.com/GayazPatan/Images/assets/156210984/fbeffdbb-717f-4b36-aad4-7b20a4092d91" width="720px" height=auto />
 </p>
 
 *  <i><b>I-Type </i></b>
+- I-type instructions involve operation between two  operands, one stored in an on-chip register and the other is an immediate operand available in the instruction itself. The fetched instruction should provide the address to the operand and help the processor to decode the type of operation to be performed and the immediate value is given to the processor as a second operand. Note: We must not ignore the fact that the immediate value can be maximum of 12-bits, as per the field size decided by the instruction format. This issue is solved later when we use AUIPC/LUI instructions.
+
+    - **EXAPMLE**
+      - Instruction: addi x10, x11, 2
+      - Description: The contents of register x11 and immediate value 2 are to be added and stored back to the x10 register.
+
+    - As per the ISA,
+      - Hex equivalent: 00d60e33
+      - Bin equivalent: 00000000110101100000111000110011
+      - Opcode: 011_0011
+      - funct3: 3’b000
+      - funct7: 7’b000_0000
+      - rs1_addr: 5’hC
+      - rs2_addr: 5’hD
+      - rd_addr: 5’h1C
+      - The instruction has been stored at memory location: 40 (or 28H)
+      - Machine cycles taken: 1       
+      - No. of clock cycles: 3
+       
+  -  Working:
+      
+      - In the first cycle, the address from the processor is sent to the icache and instruction reaches the processor in the second cycle.
+      - In next cycle, the instruction is decoded and data is read from the on-chip registers
+      - In the third cycle, the addition is performed and data is sent to on-chip registers for storage.
+
+
 <p align ="center">
  <img src="https://github.com/GayazPatan/Images/assets/156210984/dfb28c45-a9da-407c-a922-57173f3396a2" width="720px" height=auto />
 </p>
 
 *  <i><b>S-Type </i></b>
+
+ - S-Type instructions in the RISC-V architecture enable the storing of register values into memory at specific offsets determined by immediate values within the instruction. These instructions facilitate the interaction between registers and memory, allowing data to be stored at calculated memory addresses. For instance, the sw (store word) instruction takes a value from a register and writes it into memory at an address derived by adding the immediate value to a base address obtained from a register. S-Type instructions are fundamental for memory manipulation within the RISC-V architecture.
+
+    - **EXAMPLE**
+      - Instruction: sh x12, 0x6(x10)
+      - Description: The contents of register x12 are stored to data memory(dcache) via the store unit. Since this is sh instruction, only half word is loaded to the memory location [6H + [x10]], content of [x10] in this case is 2H. Hence, the destination address in this case is 8H.
+
+    - As per the ISA,
+        - Hex equivalent: 00258513
+        - Bin equivalent: 00000000001001011000010100010011
+        - Opcode: 001_0011
+        - funct3: 3’b000
+        - funct7: 7’b000_0000
+        - rs1_addr: 5’hB
+        - rs2_addr: (ignorable)
+        - rd_addr: 5’hA
+        - The instruction has been stored at memory location: 40 (or 28H)
+        - Machine cycles taken: 1         
+        - No. of clock cycles: 3
+         
+    - Working:
+        
+        - In the first cycle, the address from the processor is sent to the icache and instruction reaches the processor in the second cycle.
+        - In next cycle, the instruction is decoded and data is read from the on-chip registers
+        - In the third cycle, the addition is performed and data is sent to on-chip registers for storage.
+
 <p align ="center">
  <img src="https://github.com/GayazPatan/Images/assets/156210984/dfcc355b-ca7d-4a6a-83b6-721eaba28747" width="720px" height=auto />
 </p>
 
 *  <i><b>B-Type </i></b>
+- The B-Type instructions in RISC-V architecture are responsible for conditional branching, enabling the processor to change the flow of execution based on specific conditions. These instructions utilize immediate values to determine the offset for branching, allowing the program to jump to a new address if a certain condition is met. For instance, the beq (branch if equal) instruction compares two registers and, if they are equal, calculates the target address by adding the immediate offset to the current program counter. B-Type instructions are pivotal for implementing conditional logic and enabling control flow within RISC-V programs.
+
+    - **EXAMPLE**
+      - Instruction: bltu x10, x12, 0x14
+      - Description: The control is passed to PC 0x14 if the contents of memory location [x10] is less than that of [x12] (unsigned comparison). These are conditional jump statements in the RV32I instruction set.
+      - X10 = 2
+      - X12 = 3 Therefore, a branch is taken. Hence PC Value changes to 18H + 14H = 2C
+
+    - As per the ISA,
+
+      - Hex equivalent: 00c56a63
+      - Bin equivalent: 00000000110001010110101001100011
+      - Opcode: 110_0011
+      - funct3: 3’b110
+      - funct7: 7’b000_0000
+      - rs1_addr: 5’bA
+      - rs2_addr: 5’bC
+      - The instruction has been stored at memory location: 24 (or 18H) 
+      - Machine cycles taken: 1
+      - No. of clock cycles: 3 
+
+  -   Working:
+      
+      - In the first cycle, the address from the processor is sent to the imem and instruction reaches the processor in the second cycle. 
+      - In the next cycle, the instruction is decoded, equality is tested and the new PC is calculated and forwarded.   
+      - In the third cycle, the same value is observed in wb_mux out as well. The new PC is forwarded in 2nd cycle itself to prevent pipeline stall. 
+    
 <p align ="center">
  <img src="https://github.com/GayazPatan/Images/assets/156210984/55243375-73ea-4892-aa0d-0542f00367f3" width="720px" height=auto />
 </p>
 
 * <i><b>J-Type </i></b>
+
+- The J-Type instructions in RISC-V architecture are responsible for unconditional jumping or jumping to a new address without any condition checks. They facilitate the transfer of control to a new location by using a target address derived from the immediate value within the instruction. For instance, the jal (jump and link) instruction sets the program counter to a new address formed by combining the immediate offset with the current program counter value, allowing the processor to jump to a different part of the code while also saving the address of the next instruction in a designated register (usually the link register). J-Type instructions are essential for implementing function calls, loops, and other forms of non-conditional jumps in RISC-V programs.
+
+    - **EXAMPLE**
+       - Instruction: jalr x10, x12, 0x1
+
+      -  Description: The control is passed to PC 0x4 unconditionally. The previous PC+4H value is stored in destination register X10.
+
+       -  X12 = 3 A branch is taken. Hence, PC Value changes to 3H + 1H = 4H
+
+    - As per the ISA,
+
+      - Hex equivalent: 00160567
+      - Bin equivalent: 00000000000101100000010101100111
+      - Opcode: 110_0111
+      - funct3: 3’b000
+      - funct7: 7’b000_0000
+      - rs1_addr: 5’bC
+      - rs2_addr: (ignorable)
+      - rd_addr: 5’bA
+      - The instruction has been stored at memory location: 24 (or 18H)
+      - Machine cycles taken: 1   
+      - No. of clock cycles: 3
+       
+    - Working:
+       
+      - In the first cycle, the address from the processor is sent to the imem and instruction reaches the processor in the second cycle.
+      - In the next cycle, the instruction is decoded and the new PC is calculated and forwarded.
+      - In the third cycle, the same value is observed in wb_mux out as well.
+      - The new PC is forwarded in 2nd cycle itself to prevent pipeline stall.
+    
 <p align ="center">
  <img src="https://github.com/GayazPatan/Images/assets/156210984/6598d085-d010-473c-9bc0-b9fa3447f6f1" width="720px" height=auto />
 </p>
 
-* U-type
+* <i><b>U-type</i></b>
+- The U-Type instructions in RISC-V architecture are designed for unconditional immediate operations. These instructions facilitate the addition of an immediate value to the program counter to generate a new target address for execution. The U-Type instructions allow for the direct manipulation of the program counter by using an immediate value to form a new address. For instance, the lui (load upper immediate) instruction loads a 20-bit immediate value into the upper 20 bits of a register, effectively setting the register to the immediate value shifted left by 12 bits. U-Type instructions are fundamental for immediate operations that involve setting specific upper bits of a register or generating immediate values for calculations or address formation in RISC-V programs.
+
+  - **EXAMPLE**
+    - Instruction: lui x12, 0x12345
+    - Description: The immediate value 0x12345 is stored in upper bytes of x12 register. The main objective of LUI instruction is to add immediate values up to 20 bits which was not possible with I-type instructions.
+
+  - As per the ISA,
+
+    - Hex equivalent: 12345637
+    - Bin equivalent: 00010010001101000101011000110111
+    - Opcode: 011_0111
+    - funct3: 3’b000
+    - funct7: 7’b000_0000
+    - rs1_addr: (ignorable)
+    - rs2_addr: (ignorable)
+    - rd_addr: 5’bC
+    - The instruction has been stored at memory location: 24 (or 18H)
+    - Machine cycles taken: 1     
+    - No. of clock cycles: 3
+     
+  - Working:
+     
+    - In the first cycle, the address from the processor is sent to the imem and instruction reaches the processor in the second cycle.
+    - In next cycle, the immediate data is sent to reg_block2
+    - In the third cycle, the data is sent to on-chip registers for storage.
+
 <p align ="center">
  <img src="https://github.com/GayazPatan/Images/assets/156210984/c92f70a5-3d7f-4e5b-a928-5bb3577e30dc" width="720px" height=auto />
 </p>
