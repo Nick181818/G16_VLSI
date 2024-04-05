@@ -271,7 +271,6 @@ The J-Type instructions in RISC-V architecture are responsible  for altering the
 JAL (Jump and Link) stores the address of the next instruction into a register and jumps to a calculated address.
 JALR (Jump and Link Register) jumps to an address stored in a register and stores the return address in a specified register.
 
-
 - **EXAMPLE**
       - Instruction: jalr x10, x12, 0x1
 
