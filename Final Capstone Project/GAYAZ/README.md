@@ -8,7 +8,7 @@ RISC-V 32 is a version of the RISC-V instruction set architecture that operates 
 # CONTENT
 * DESIGN SPECIFICATIONS
 * INTRODUCTION
-* STRV32I STRCUTURE
+* Advantages of 3-stage pipelined
 * OPERATION
 * OUTPUT
 </i></b>
@@ -92,16 +92,10 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
 *	<b>High Extensibility</b>: A pivotal feature of RISC-V is its exceptional extensibility. This attribute enables users to expand the instruction set architecture by incorporating custom instructions or entire extensions. Its extensibility allows for the addition of new features, optimizations, and specialized functionalities, ensuring adaptability to evolving technological requirements and computing paradigms.
 
 # <i><b>Advantages of 3-stage pipelined</i></b>
-
-<b>Improved Throughput</b>:Throughput can be increased by processing numerous instructions at once using pipelining. A three-stage pipeline allows the processor to process one instruction at a time by separating instructions into phases called fetch, decode, and execute. This increases the processor's throughput overall by allowing the next instruction to be retrieved and decoded while the previous instruction is being processed.
-
-<b>Reduced Cycle Time</b>:Reducing the processor cycle time can be achieved by segmenting the execution of one instruction into many steps. Every stage has a set duration, and as soon as one instruction moves on to the next, the processor can begin carrying out the subsequent one. This allows instructions to be executed more quickly than in non-pipelined architectures.
-
-<b>Simpler Control Logic</b>:Three-stage pipelining streamlines the processor's control logic. It is simpler to develop and implement the processor when each stage functions independently and has its own control unit. Because of its simplicity, there is less complexity, less power usage, and possibly even faster clock speeds.
-
-<b>Better Resource Utilization</b>:Pipelining makes it possible to use hardware resources more effectively. Other stages can work on succeeding instructions while the execute stage is working on one instruction at a time. Better overall performance results from the processor's resources being fully used thanks to this overlapping of instruction execution.
-
-<b>Scalability</b>: Pipelining offers a scalable method for designing processors. It gets simpler to control the complexity of instruction execution as processor complexity rises and pipeline stages multiply. The capacity to scale allows for the creation of processors with increased efficiency and performance.
+* <i><b>Increased Throughput</i></b>: Pipelining enables multiple instructions to be processed simultaneously, enhancing the overall throughput of the CPU.
+* <i><b>Improved Efficiency</i></b>: Concurrent execution of instructions reduces idle time in the CPU, making better use of resources.
+* <i><b>Enhanced Performance</i></b>: By breaking down instruction execution into smaller stages, pipelining speeds up the overall execution of instructions.
+* <i><b>Resource Utilization<i><b>: It allows the CPU to operate at a higher clock frequency by leveraging parallel processing, thereby utilizing resources more efficiently.
 
 
 
