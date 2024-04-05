@@ -1,27 +1,30 @@
-# <b>STRV32I</b>
-STRV32I is actually a RISC-V. RISC-V 32 refers to the 32-bit version of the RISC-V instruction set architecture (ISA). 
-Like its 64-bit counterpart, RISC-V 32 is based on the principles of Reduced Instruction Set Computing (RISC).
-RISC-V 32 is a version of the RISC-V instruction set architecture that operates with 32-bit data and addresses. 
+# Final Capstone Project Riscv-32I
 
-  It  prioritizes simplicity and efficiency in processor design. RISC-V 32, like its 64-bit counterpart, is modular, open-source, and allows for optional extensions to support specific functionalities. It's suitable for a wide range of applications, from embedded systems to smartphones, offering versatility and flexibility.
+  ## <b>Sure Trust RiscV-32I</b>
 
+   + $STRV32I is actually a RISC-V. RISC-V 32 refers to the 32-bit version of the RISC-V instruction set architecture (ISA).$ 
+   + $Like its 64-bit counterpart, RISC-V 32 is based on the principles of Reduced Instruction Set Computing (RISC).$
+   + $RISC-V 32 is a version of the RISC-V instruction set architecture that operates with 32-bit data and addresses. $
+
+   + $It  prioritizes simplicity and efficiency in processor design. RISC-V 32, like its 64-bit counterpart, is modular, open-source,    and allows for optional extensions to support specific functionalities.$ 
+   + $It's suitable for a wide range of applications, from embedded systems to smartphones, offering versatility and flexibility.$
 
   
-  <b>
 
-## CONTENTS
+  ## <b> CONTENTS </b>
 
- * DESIGN SPECIFICATIONS
- * FILES IN THIS SUBMISSION
- * INTRODUCTION
- * STRV32I STRCUTURE
- * OPERATION
- * INSTRUCTIONS
- * OUTPUT  
-  </b>
+  - [x] DESIGN SPECIFICATIONS
+  - [x] Deliverables
+  - [x] FILES IN THIS SUBMISSION
+  - [x] INTRODUCTION
+  - [x] STRV32I STRCUTURE
+  - [x] OPERATION
+  - [x] INSTRUCTIONS
+  - [x] OUTPUT  
 
-# <b>DESIGN SPECIFICATIONS</b>
-Design a 3-stage pipelined RISC-V processor that works on RV32I ISA.
+  ## <b>DESIGN SPECIFICATIONS</b>
+
+   Design a 3-stage pipelined RISC-V processor that works on RV32I ISA.
 
 1. Interface:
 
@@ -49,72 +52,106 @@ Design a 3-stage pipelined RISC-V processor that works on RV32I ISA.
 
 
   ####  Input And Output Description
-|Port name |Direction|Type|Description|
-|---|---|---|---|
-|clk_in|input| |System Clock|
-|rst_in|input| |System Reset|
-|dmdata_in|input| [31:0]| Data input from dcache|
-|instr_in|input| [31:0]|Instruction input from icache|
-|dmwr_req_out|output| |Write request to dcache|
-|imaddr_out|output| [31:0]|Address output to icache|
-|dmaddr_out|output| [31:0]|Address output to dcache|
-|dmwr_mask_out|output | [3:0]| Mask bits to dcache|
-|dmdata_out|output| [31:0]|Data output to dcache|
+  |Port name |Direction|Type|Description|
+  |---|---|---|---|
+  |`clk_in`|input| |System Clock|
+  |`rst_in`|input| |System Reset|
+  |`dmdata_in`|input| [31:0]| Data input from dcache|
+  |`instr_in`|input| [31:0]|Instruction input from icache|
+  |`dmwr_req_out`|output| |Write request to dcache|
+  |`imaddr_out`|output| [31:0]|Address output to icache|
+  |`dmaddr_out`|output| [31:0]|Address output to dcache|
+  |`dmwr_mask_out`|output | [3:0]| Mask bits to dcache|
+  |`dmdata_out`|output| [31:0]|Data output to dcache|
 
-# <b>FILES IN THIS SUBMISSIONS</b>
 
-```
-├── alu_unit.v
-├── branch_unit.v
-├── control_unit.v
-├── decoder.v
-├── immediate_adder.v
-├── immediate_generator.v
-├── load_unit.v
-├── pc_unit.v
-├── Readme.md
-├── reg_block_1.v
-├── reg_block_2.v
-├── reg_file.v
-├── Riscv_Top.v
-├── Riscv_tb.v
-├── store_unit.v
-├── WB_mux_selection_unit.v
-├── wr_en_gen.v
-└── Instr_File.mem
-```
- - **Readme.md** - This is a markdown file which contains all the report of project.
- - **Riscv_Top.v** - This is the Top Module and it contains all the Instantiations of 
-    - `alu_unit.v`
-    - `branch_unit.v` 
-    - `control_unit.v`
-    - `decoder.v`
-    - `immediate_adder.v`
-    - `immediate_generator.v`
-    - `load_unit.v`
-    - `pc_unit.v`
-    - `reg_block_1.v`
-    - `reg_block_2.v`
-    - `reg_file.v`
-    - `store_unit.v`
-    - `WB_mux_selection_unit.v`
-    - `wr_en_gen.v`
- - **Riscv_tb.v** - This is a test bench file recquired to play along the input values.
+  ##  <b> Deliverable </b>
 
- - **Instr_File.mem** - This is an Instruction File which has instruction operations to do while executing a program.
+  + **Performance Analysis:** 
 
-# <b>INTRODUCTION</b>
-Computers are built on specific architectural designs that dictate how instructions are executed and processed. Two primary architectures exist: Complex Instruction Set Computer (CISC) and Reduced Instruction Set Computer (RISC).
+      + $Clock cycle count, throughput, and latency for various instructions and instruction sequences.$
+
+  + **Pipeline Diagram:** 
+
+    + $Illustration of pipeline stages and instruction flow.$
+
+   + **Hazard Detection and Resolution:**
+    
+      + $Explanation of data hazards, control hazards, and structural hazards detection and mitigation.$
+
+  + **Memory Subsystem:**
+    
+    + $Description of memory access handling, including memory hierarchy and cache structure.$
+
+  + **Forwarding and Stall Mechanisms:**
+    
+    +  $Description of data forwarding and stall mechanisms for maintaining correct instruction execution.$
+
+  + **Exception Handling:**
+  
+    + $Explanation of how exceptions, interrupts, traps, and system calls are handled.$
+
+  + **Verification Plan:**
+  
+    + $Methodology and tools used for verifying the correctness of the processor design.$
+
+
+
+  ## **FILES IN THIS SUBMISSIONS**
+
+    ```
+    ├── alu_unit.v
+    ├── branch_unit.v
+    ├── control_unit.v
+    ├── decoder.v
+    ├── immediate_adder.v
+    ├── immediate_generator.v
+    ├── load_unit.v
+    ├── pc_unit.v
+    ├── Readme.md
+    ├── reg_block_1.v
+    ├── reg_block_2.v
+    ├── reg_file.v
+    ├── Riscv_Top.v
+    ├── Riscv_tb.v
+    ├── store_unit.v
+    ├── WB_mux_selection_unit.v
+    ├── wr_en_gen.v
+    └── Instr_File.mem
+    ```
+     
+  - **Readme.md** - This is a markdown file which contains all the report of project.
+  - **Riscv_Top.v** - This is the Top Module and it contains all the Instantiations of 
+      - `alu_unit.v`
+      - `branch_unit.v` 
+      - `control_unit.v`
+      - `decoder.v`
+      - `immediate_adder.v`
+      - `immediate_generator.v`
+      - `load_unit.v`
+      - `pc_unit.v`
+      - `reg_block_1.v`
+      - `reg_block_2.v`
+      - `reg_file.v`
+      - `store_unit.v`
+      - `WB_mux_selection_unit.v`
+      - `wr_en_gen.v`
+  - **Riscv_tb.v** - This is a test bench file recquired to play along the input values.
+   - **Instr_File.mem** - This is an Instruction File which has instruction operations to do while executing a program.
+
+  ## <b>INTRODUCTION</b>
+    
+  Computers are built on specific architectural designs that dictate how instructions are executed and processed. Two primary architectures exist: Complex Instruction Set Computer (CISC) and Reduced Instruction Set Computer (RISC).
 
 
 #### Block Diagram
 
 <p align ="center">
- <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/d673f2cc-ad36-4fa1-b653-dce3de226bfe" width="720px" height=auto />
+ <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/baa5520d-67a2-4878-abac-f81363cc4e44" width="720px" height=auto />
 </p>
 
 
-<i><b> RISC (Reduced Instruction Set Computer)</i></b>
+***RISC (Reduced Instruction Set Computer)***
 RISC architecture, on the contrary, focuses on a reduced set of simple instructions, each typically executed in a single clock cycle. This simplicity results in faster execution and improved performance.
 RISC architectures prioritize efficiency by favoring a smaller set of instructions, emphasizing faster instruction execution, and enabling better pipelining and parallelism. Notable RISC architectures include ARM and MIPS.
 
@@ -127,9 +164,14 @@ RISC-V stands as a cutting-edge open-source instruction set architecture (ISA) t
 4.	<i><b>Memory Access</i></b>: If necessary, the CPU accesses memory to read or write data.
 5.	<i><b>Write Back</i></b>: The CPU writes the results of the operation back to the appropriate register or memory location.
 
-<p align ="center">
- <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/b0c15599-405b-46a0-b975-12f3d3d86a02" width="720px" height=auto />
-</p>
+> [!IMPORTANT]
+> **Why RISCV?**
+> RISC architecture, on the contrary, focuses on a reduced set of simple instructions, each typically executed in a single clock cycle.
+> This simplicity results in faster execution and improved performance.
+> RISC architectures prioritize efficiency by favoring a smaller set of instructions, emphasizing faster instruction execution, and enabling better pipelining and parallelism.
+  
+> [!Note] 
+> RISC architectures include ARM and MIPS.
 
 
 ##	<b>Advantages of RISC-V</b>
@@ -150,147 +192,77 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
 # <b>STRV32I STRCUTURE</b>
 
 <p align ="center">
- <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/9d19a51f-33e1-4feb-a55d-7e970d64578d" width="720px" height=auto />
+ <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/8b31b2d9-6fcc-438c-98ba-8d8fbfaded9e" width="720px" height=auto />
 </p>
 
 # <b>OPERATION</b>
- #### <i></b>PC Unit</i></b>:
-The Program Counter is a register in a CPU that stores the memory address of the next instruction to be fetched and executed. It keeps track of the current position in the program's execution sequence.
 
-#### Block Diagram
+ #### <i></b>1] PC Unit</i></b>:
+ - Decide next PC value.
+ - As here each memory location is of 32 bits so every time, under normal circumstances, PC get incremented by 4
+ - If any misalign instr. comes then for that we have misaligned_instr_out
+ - If reset then the value of PC becomes 0000H
+ - In the case of Branch or Jump instr. we have to jump at a new location, ( for which immediate value is offset to PC)  for that we have i_addr_out 
 
-<p align ="center">
- <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/7591cb72-ee49-4ff1-907c-bf5f63046ef9" width="720px" height=auto />
-</p>
+#### ***2]  Reg Block 1:***
+ - It is used for synchronization purpose so that all the signals of stage 1 pass through it so that they are able to reach 2nd stage in 2nd clock cycle
 
+#### ***3] Immediate Generator:***
+ - In case of instruction of branch and jump type, we need to make a immediate value which will be later added to PC so that immediate value will be produced by immediate Generator
+ - Instr_in gives immediate value and imm_type_in tells it is of which type (branch or jump)
 
-### <i><b>Branch Unit:</i></b>
+#### ***4] Immediate Adder:***
+ - It takes the PC_in and adds it with the immediate value produced by immediate generator and hence successfully generates new value of PC  
 
-One of the key functions of the branch unit is to predict the outcome of branch instructions before their execution. This prediction is based on various factors, such as the history of previous branches, the program counter (PC), and branch history tables. Predicting whether a branch will be taken (i.e., the condition will evaluate to true) or not taken (i.e., the condition will evaluate to false) is crucial for minimizing pipeline stalls and improving performance.When a branch instruction is encountered, the branch unit calculates the target address of the branch. This target address determines the location in the instruction stream where program execution will continue after the branch is resolved.
+#### ***5]  Write Enable Generator:
+ - It generates the write enable signals, which will decide whether we can access the register file for writing / updating any value
 
-#### Block Diagram
 
+#### ***6] Integer File:***
+ - The Integer File has 32 general-purpose registers and supports read and write operations. 
+ - Reads are requested by pipeline stage 2 and provide data from one or two registers whereas Writes are requested by stage 3 and put the data coming from the Write back Multiplexer into the selected register. 
+ - This we have done to avoid DATA HAZARD
+ - The first register, i.e. x[0],  is hardwired with 0.
 
-<p align ="center">
- <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/97d95453-5d7a-4986-8204-147880c82ca5" width="720px" height=auto />
-</p>
+#### ***7] Instruction MUX:***
+ - This module takes the instruction (input to core) and provides the fields which are used by the other modules to perform their functionality. 
+ - When 'flush' is high, use 32'h00000013 to provide the fields. 
+ - When 'flush' is low use core instruction (instr_in) to provide the fields
 
 
-### <i><b>Control unit</i></b>
+#### ***8] Decoder:***
+ - The Decoder decodes the decoded instruction (from instr. mux) and generates the signals that control various units 
 
-The Control Unit (CU) is a core component of the Central Processing Unit (CPU) responsible for coordinating and directing the operation of the entire processor. It interprets and executes instructions, directing the flow of data between the CPU's various functional units and external devices. The primary functions of the control unit include instruction decoding, instruction sequencing, and generating control signals to coordinate the operation of other CPU components.
+#### ***9] Branch Unit:***
+ - Branch conditions are conditional jumps. The Branch Unit decides if a branch instruction must be taken or not. 
+ - It receives two operands from the Integer Register File and, based on the value of opcode and funct3 instruction fields, it decides the branch i.e.value of branch_taken_out
 
-#### Block Diagram
+#### ***10]  Control Unit:***
+ - It can stay in either of the 2 states i.e. Reset State (if rst_in =1) & Operating State
+ - It flushes out the PC value in case of branch and jump instructions.
 
+#### ***11] Store Unit:***
+ - The Store Unit drives the signals that interface with external data memory. 
+ - It places the data to be written (which can be a byte, half word or word) in the right position in data_out and sets the value of wr_mask_out in an appropriate way depending on funct3_in value
+ - Then it puts the data back into D-cache depending on value of mem_wr_req_in
 
-<p align ="center">
- <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/f381bc50-e0c9-49d5-bbe1-b10ca96ca7cd" width="720px" height=auto />
-</p>
+#### ***12] Reg Block 2:***
+ - It registers all the inputs and produces the outputs at the posedge of clock ,if there is no reset , so that  the signals of stage 2 can't reach stage 3 before 3rd clock cycle.
+ - The block also integrates a 2:1 MUX with select-line as branch_taken_in. The LSB of iadder_out_reg_out is assigned with 0 if branch_taken_in is 1, else iadder_out_reg_out [0] is assigned with the registered value of iadder_in[0].
 
+#### ***13] ALU:***
+ - The ALU applies ten distinct logical and arithmetic operations in parallel to two 32-bit operands, outputting the result selected by opcode_in
 
-### <i><b>Instruction Unit</i></b>
+#### ***14] Load Unit:***
+ - The Load Unit reads the data_in input signal and forms a 32-bit value based on the load_size_in .
+ - Load_size_in tells whether the no. will be byte, half-word or word and iadder_out_1_to_0_in tells at what position it will be placed in o/p
+ - The formed value (placed on output) can then be written in the Integer Register File.
 
-An instruction multiplexer (mux) is a component within a CPU's control unit responsible for selecting the next instruction to be executed from among multiple possible sources. It plays a crucial role in directing the flow of instruction execution within the CPU.Instruction muxes are often used at various stages of the CPU's instruction pipeline to select the appropriate instruction for each pipeline stage. This helps ensure that instructions are fetched and processed efficiently, minimizing pipeline stalls and improving overall CPU performance.
 
-#### Block Diagram
-
-
-<p align ="center">
- <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/e1e1201b-7418-4a42-949b-03e398055530
- " width="720px" height=auto />
-</p>
-
-
-### <i><b>Write Enable Generator</i></b>
-
-A write enable generator is a component within a computer system, often found in memory and input/output (I/O) interfaces, that generates signals to control when data can be written to a specific location in memory or when output data can be enabled for transmission.The write enable generator plays a crucial role in coordinating write operations in computer systems, ensuring that data is written or output only when appropriate and in a manner consistent with the system's operation.
-
-#### Block Diagram
-
-
-<p align ="center">
- <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/3553ddfb-46ec-4247-b4f1-846d79054dc3" width="720px" height=auto />
-</p>
-
-
-### <i><b>Immediate Adder</i></b>
-
-An immediate adder, also known as a constant adder or immediate arithmetic unit, is a component found within a CPU's arithmetic logic unit (ALU) that performs addition operations involving immediate values or constants.Immediate adders are commonly used in CPU architectures to perform arithmetic operations that involve immediate values, such as adding constants to variables or performing arithmetic with small fixed values. They play a crucial role in executing instructions efficiently, particularly in the context of arithmetic and logical operations with immediate operands.
-
-#### Block Diagram
-
-
-<p align ="center">
- <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/ae0b8478-df18-4a32-816e-c764c85724b6" width="720px" height=auto />
-</p>
-
-
-### <i><b>Immediate Generator</i></b>
-
-Immediate generators are essential for efficient execution of instructions that involve immediate operands, as they eliminate the need to access memory or registers to fetch these constants, thereby reducing latency and improving performance.
-
-Constant Encoding: In some architectures, the immediate values are encoded directly within the instruction bits. The immediate generator decodes these encoded values and provides them to the execution units.
-
-Sign Extension: For signed immediate values, the immediate generator may perform sign extension, which extends the sign bit of the immediate value to fill the full width of the operand, ensuring correct arithmetic operations.
-
-Zero Extension: Similarly, for unsigned immediate values, the immediate generator may perform zero extension, which fills the unused bits with zeroes to match the operand width.
-
-Shift and Masking: In some cases, the immediate generator may perform shifting or masking operations to adjust the immediate value according to the instruction's requirements.
-
-#### Block Diagram
-
-
-<p align ="center">
- <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/0152b296-7488-46b2-a242-2fbe80d389ae" width="720px" height=auto />
-</p>
-
-
-### <i><b>ALU Unit</i></b>
-The Arithmetic Logic Unit (ALU) is a fundamental component of a CPU responsible for performing arithmetic and logical operations on data. It's a combinational circuit that takes input data from registers, performs the specified operation, and produces the result.
-
-Inputs: The ALU receives operands from CPU registers or memory. These operands are the data on which the arithmetic or logical operation is to be performed. In some cases, the ALU may also receive control signals specifying the operation to be executed.
-
-Operations: The ALU can perform a variety of operations, including addition, subtraction, AND, OR, XOR, shift operations (left shift, right shift), comparison (equality, less than, greater than), and more. The specific operation performed is determined by control signals received by the ALU.
-
-Output: After performing the operation, the ALU produces a result, which is typically stored back in a register or sent to another part of the CPU for further processing. The output may also include status flags indicating the result of the operation, such as overflow, carry, zero, or negative flags.
-
-Speed and Efficiency: ALUs are designed to perform operations quickly and efficiently, often using parallelism and pipelining techniques to maximize throughput. They are critical for the overall performance of the CPU, as many instructions executed by the CPU involve operations performed by the ALU.
-
-#### Block Diagram
-
-
-<p align ="center">
- <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/09754fea-7aeb-4d69-8574-5588c6f79217
- " width="720px" height=auto />
-</p>
-
-
-
-### <i><b>Store unit</i></b>
-
-A "store unit" in a computer architecture context typically refers to the component responsible for performing store or write operations to memory. It's a part of the memory subsystem of a CPU and is involved in transferring data from registers or caches to memory.The store unit plays a crucial role in the memory subsystem of a CPU, facilitating the efficient transfer of data between the CPU and memory. Its performance and reliability are essential for the overall system performance and data integrity.
-
-#### Block Diagram
-
-<p align ="center">
- <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/41840370-2ec0-4293-9294-a65bcfc29f81" width="720px" height=auto />
-</p>
-
-
-
-### <i><b>Write Back</i></b>
-
-In computer architecture, "write back" typically refers to a memory access strategy used in caching systems, particularly in the context of cache coherence protocols and CPU cache management.
-Cache Operation: In a CPU cache, data is typically stored in cache lines, each containing a block of memory. When the CPU reads data from memory, it first checks if the data is present in the cache. If the data is found in the cache (a cache hit), the CPU can retrieve it directly from the cache without accessing main memory, which is faster.
-
-Write Operations: When the CPU needs to write data to memory, it first checks if the corresponding cache line containing the memory location is present in the cache. If the data is already in the cache, the CPU can update the cache line directly without accessing main memory. However, instead of immediately updating the main memory, the CPU may choose to update the cache line and mark it as "dirty" to indicate that it has been modified.
-
-#### Block Diagram
-
-<p align ="center">
- <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/271fe94e-08cf-4d84-bd00-12675dd7fc65" width="720px" height=auto />
-</p>
-
+#### ***15] WB Mux:***
+ - It sends the value that is to be written back into reg. File depending on value of wb_mux_sel_reg_in   
+ - For alu_2nd_src_mux_out: –If 'alu_src_reg_in' is high then 'alu_2nd_src_mux_out' = 'rs2__reg_in' else 'alu_2nd_src_mux_out' = 'imm_reg_in'
+ - For wb_mux_out, the value will be assigned to depending on value of wb_mux_sel_reg_in 
 
 
 # **INSTRUCTIONS**
@@ -567,4 +539,3 @@ Write Operations: When the CPU needs to write data to memory, it first checks if
       <p align ="center">
  <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/c62b6d4c-5b38-4646-9fc7-018d38215253" width="720px" height=auto />
 </p>
-
