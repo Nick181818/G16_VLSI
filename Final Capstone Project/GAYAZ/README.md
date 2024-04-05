@@ -246,7 +246,7 @@ I-type instructions execute operations like immediate arithmetic (addition, subt
         - Opcode: 010_0111
         - funct3: 3’b001
         - funct7: 7’b000_0000
-        - rs1_addr: 5’hB
+        - rs1_addr: 5’hA
         - rs2_addr: 5’hC
         - rd_addr: (ignorable)
         - The instruction has been stored at memory location: 40 (or 28H)
