@@ -3,7 +3,7 @@
 This project is about design of RISC-V Processor that works on the RV32I ISA with the following interfaces :
 
 -  ### *General Interface :*
-    - $clk$ _ $in$ $:$ $ System $ $ clock$ $(10MHz)$
+    - $clk$ _ $in$ $:$ $System$ $clock$ $(10MHz)$
     - $rst$ _ $in$ $:$ $Active$ $high$ $and$ $synchronous$ $system$ $reset$
 - ### *Instruction Cache Interface :*
    - $im$ _ $addr$ _ $out$ $:$ $Carries$ $32$ - $bit$ $target$ $address$ $to$ $icache$
@@ -187,7 +187,7 @@ A 3-stage pipelined RISC data path divides the instruction execution into three 
 
 <p align="center">
   <img src="https://github.com/ShoaibMalikSM/README-2-.md/assets/156204834/82504afb-3e54-430e-a586-fda9d7b3f351
-  " width="500">
+  " width="800">
 </p> 
 
 
@@ -210,7 +210,7 @@ A 3-stage pipelined RISC data path divides the instruction execution into three 
 
 <p align="center">
   <img src="https://github.com/ShoaibMalikSM/README-2-.md/assets/156204834/78534de9-a752-4b7b-9a7b-7f68bb82fa48
-  " width="500">
+  " width="800">
 </p> 
 
 
@@ -233,7 +233,7 @@ A 3-stage pipelined RISC data path divides the instruction execution into three 
 ### *Tool Simulation :*
 
 <p align="center">
-  <img src="https://github.com/ShoaibMalikSM/README-2-.md/assets/156204834/1863c115-893d-4bb4-8c1d-930ced949d53" width="500">
+  <img src="https://github.com/ShoaibMalikSM/README-2-.md/assets/156204834/1863c115-893d-4bb4-8c1d-930ced949d53" width="800">
 </p> 
 
  ### *L - Type :*
@@ -251,7 +251,7 @@ A 3-stage pipelined RISC data path divides the instruction execution into three 
 
 ### *Tool Simulation :*
 <p align="center">
-  <img src="https://github.com/ShoaibMalikSM/README-2-.md/assets/156204834/771a6b20-ae2b-490f-b0e4-a210181bab50" width="500">
+  <img src="https://github.com/ShoaibMalikSM/README-2-.md/assets/156204834/771a6b20-ae2b-490f-b0e4-a210181bab50" width="800">
 </p> 
 
 ### *B - Type :*
@@ -270,7 +270,7 @@ A 3-stage pipelined RISC data path divides the instruction execution into three 
 
 ### *Tool Simulation :*
 <p align="center">
-  <img src="https://github.com/ShoaibMalikSM/README-2-.md/assets/156204834/f6f3d137-81b6-467b-b730-4cedd313caab" width="500">
+  <img src="https://github.com/ShoaibMalikSM/README-2-.md/assets/156204834/f6f3d137-81b6-467b-b730-4cedd313caab" width="800">
 </p> 
 
 ### *J - Type :*
@@ -290,7 +290,7 @@ A 3-stage pipelined RISC data path divides the instruction execution into three 
 ### *Tool simulation :*
 
 <p align="center">
-  <img src="https://github.com/ShoaibMalikSM/README-2-.md/assets/156204834/b996d9ef-c334-4d76-b1b7-925bdb45720d" width="500">
+  <img src="https://github.com/ShoaibMalikSM/README-2-.md/assets/156204834/b996d9ef-c334-4d76-b1b7-925bdb45720d" width="800">
 </p> 
 
 ### *U - Type :*
@@ -308,7 +308,7 @@ A 3-stage pipelined RISC data path divides the instruction execution into three 
 
 ### *Tool Simulation :*
 <p align="center">
-  <img src="https://github.com/ShoaibMalikSM/README-2-.md/assets/156204834/f2cb52b4-21c7-4870-9388-1cbeb00fe1d5" width="500">
+  <img src="https://github.com/ShoaibMalikSM/README-2-.md/assets/156204834/f2cb52b4-21c7-4870-9388-1cbeb00fe1d5" width="800">
 </p> 
 
 
