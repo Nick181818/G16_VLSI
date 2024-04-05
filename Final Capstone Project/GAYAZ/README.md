@@ -141,6 +141,7 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
 # <i><b> OUTPUT</i></b>
 
 *  <i><b>R-Type </i></b>
+
   R-type instructions involve operation between two operands stored in two on-chip registers. The fetched instruction should provide the address to the two operands and help the processor to decode the type of operation to be performed.
 
      - **EXAMPLE**
@@ -172,6 +173,7 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
 </p>
 
 *  <i><b>I-Type </i></b>
+
  I-type instructions involve operation between two  operands, one stored in an on-chip register and the other is an immediate operand available in the instruction itself. The fetched instruction should provide the address to the operand and help the processor to decode the type of operation to be performed and the immediate value is given to the processor as a second operand. Note: We must not ignore the fact that the immediate value can be maximum of 12-bits, as per the field size decided by the instruction format. This issue is solved later when we use AUIPC/LUI instructions.
 
     - **EXAPMLE**
@@ -234,6 +236,7 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
 </p>
 
 *  <i><b>B-Type </i></b>
+
  The B-Type instructions in RISC-V architecture are responsible for conditional branching, enabling the processor to change the flow of execution based on specific conditions. These instructions utilize immediate values to determine the offset for branching, allowing the program to jump to a new address if a certain condition is met. For instance, the beq (branch if equal) instruction compares two registers and, if they are equal, calculates the target address by adding the immediate offset to the current program counter. B-Type instructions are pivotal for implementing conditional logic and enabling control flow within RISC-V programs.
 
     - **EXAMPLE**
@@ -302,6 +305,7 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
 </p>
 
 * <i><b>U-type</i></b>
+
  The U-Type instructions in RISC-V architecture are designed for unconditional immediate operations. These instructions facilitate the addition of an immediate value to the program counter to generate a new target address for execution. The U-Type instructions allow for the direct manipulation of the program counter by using an immediate value to form a new address. For instance, the lui (load upper immediate) instruction loads a 20-bit immediate value into the upper 20 bits of a register, effectively setting the register to the immediate value shifted left by 12 bits. U-Type instructions are fundamental for immediate operations that involve setting specific upper bits of a register or generating immediate values for calculations or address formation in RISC-V programs.
 
   - **EXAMPLE**
