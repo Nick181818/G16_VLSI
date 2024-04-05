@@ -273,8 +273,9 @@ Employ immediate values for branching, facilitating conditional jumps.
 
 - **EXAMPLE**
     - Instruction: bltu x10, x12, 0x14
-    - Description: The control is passed to PC 0x14 if the contents of memory location [x10] is less than that of [x12] (unsigned comparison). These are conditional jump statements in the RV32I instruction set. X10 = 2
-       X12 = 3 Therefore, a branch is taken. Hence PC Value changes to 18H + 14H = 2C
+    - Description: The control is passed to PC 0x14 if the contents of memory location [x10] is less than that of [x12] (unsigned comparison). These are conditional jump statements in the RV32I instruction set.
+      - X10 = 2
+      - X12 = 3 Therefore, a branch is taken. Hence PC Value changes to 18H + 14H = 2C
 
     - As per the ISA,
 
