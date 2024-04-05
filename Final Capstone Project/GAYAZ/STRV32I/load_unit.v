@@ -1,28 +1,76 @@
 module load_unit(
-  input [31:0]dm_data_in,
-  input [1:0]iadder_out_1to0_in,
-  input load_unsigned_in,
-  input [1:0]load_size_in,
-  output reg [31:0]load_output_o
-);
- 
-  always@(*) begin 
-      case(load_size_in)
-        2'b00: begin 
-          case(iadder_out_1to0_in)
-            2'b00: load_output_o = (load_unsigned_in)? {24'b0,dm_data_in[7:0]}        : {{24{dm_data_in[7]}},dm_data_in[7:0]};
-            2'b01: load_output_o = (load_unsigned_in)? {16'b0,dm_data_in[15:8],8'b0}  : {{16{dm_data_in[7]}},dm_data_in[15:8],8'b0};
-            2'b10: load_output_o = (load_unsigned_in)? {8'b0,dm_data_in[23:16],16'b0} : {{8{dm_data_in[7]}},dm_data_in[23:16],16'b0};
-            2'b11: load_output_o = (load_unsigned_in)? {dm_data_in[31:24],24'b0}      : {dm_data_in[31:24],24'b0}; 
-          endcase 
-        end 
-        2'b01: begin 
-          case(iadder_out_1to0_in[1])
-            1'b0: load_output_o = (load_unsigned_in)? {16'b0,dm_data_in[16:0]}  : {{16{dm_data_in[16]}},dm_data_in[16:0]}; 
-            1'b1: load_output_o = (load_unsigned_in)? {dm_data_in[31:17],16'b0} : {dm_data_in[31:17],16'b0}; 
-          endcase 
-        end 
-        default: load_output_o = dm_data_in; 
-      endcase 
-    end   
+    input [31:0] dmdata_in,
+    input [1:0] iadder_out_1_to_0_in,
+    input load_unsigned_in,
+    input [1:0] load_size_in,
+    output [31:0] lu_output_out
+    );
+    
+    // declaring reg nets for procedural block
+    reg [31:0] data_out;
+    
+    always @ (*)
+    begin
+        case (load_size_in)
+            2'b00:
+            begin
+                case (iadder_out_1_to_0_in)
+                    2'b00: 
+                    begin
+                        if (load_unsigned_in)
+                            data_out = {24'b0, dmdata_in[7:0]};
+                        else
+                            data_out = {{24{dmdata_in[7]}}, dmdata_in[7:0]};
+                    end
+                    2'b01: 
+                    begin
+                        if (load_unsigned_in)
+                            data_out = {16'b0, dmdata_in[15:8], 8'b0};
+                        else
+                            data_out = {{16{dmdata_in[15]}}, dmdata_in[15:8], 8'b0};
+                    end
+                    2'b10: 
+                    begin
+                        if (load_unsigned_in)
+                            data_out = {8'b0, dmdata_in[23:16], 16'b0};
+                        else
+                            data_out = {{8{dmdata_in[23]}}, dmdata_in[23:16], 16'b0};
+                    end
+                    2'b11: 
+                    begin
+                        if (load_unsigned_in)
+                            data_out = {dmdata_in[31:24], 24'b0};
+                        else
+                            data_out = {dmdata_in[31:24], 24'b0};
+                    end
+                    default:
+                    begin
+                    data_out <= dmdata_in;
+                    end
+                endcase
+            end
+            2'b01:
+            begin
+                case (iadder_out_1_to_0_in[1])
+                    1'b0:
+                    begin
+                        if (load_unsigned_in)
+                            data_out = {16'b0, dmdata_in[15:0]};
+                        else
+                            data_out = {{16{dmdata_in[15]}}, dmdata_in[15:0]};
+                    end
+                    1'b1:
+                    begin
+                        data_out = {dmdata_in[31:16], 16'b0};
+                    end
+                endcase
+            end
+            default:
+            begin
+                data_out = dmdata_in;
+            end
+        endcase
+    end
+    
+    assign lu_output_out = data_out;
 endmodule

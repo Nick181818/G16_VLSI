@@ -197,7 +197,7 @@ These instructions operate on data held in registers. It cover arithmetic (such 
         
         
 <p align ="center">
- <img src="https://github.com/GayazPatan/Images/assets/156210984/11ee78aa-f579-4dd9-8d98-3a11ed5651d5" width="720px" height=auto />
+ <img src="https://github.com/GayazPatan/Images/assets/156210984/587fc4db-2004-4f34-9899-b93843779a43" width="720px" height=auto />
 </p>
 
 *  <i><b>I-Type </i></b>

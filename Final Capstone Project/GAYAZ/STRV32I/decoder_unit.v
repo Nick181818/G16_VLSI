@@ -1,7 +1,7 @@
-module decoder_unit (
+module decoder_unit(
     input func_7_5_in,
-  input [14:12] func_3_in,
-    input [6:2] opcode_in,
+    input [14:12] func_3_in,
+    input [6:0] opcode_in,
     output[2:0] wb_mux_sel_out,
     output[2:0] imm_type_out,
     output mem_wr_req_out,
