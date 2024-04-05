@@ -318,8 +318,8 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
         
       - Tool Simulation:
 
-    <p align ="center">
- <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/6a0518be-b13e-4db1-a781-a7a4be69dbe7" width="720px" height=auto />
+<p align ="center">
+  <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/6a0518be-b13e-4db1-a781-a7a4be69dbe7" width="720px" height=auto />
 </p>
 
 
@@ -364,8 +364,8 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
 
   - Tool Simulation:
 
-  <p align ="center">
- <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/6bdc7fa3-9e27-47e5-aa54-f10a8207f4fe" width="720px" height=auto />
+<p align ="center">
+  <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/6bdc7fa3-9e27-47e5-aa54-f10a8207f4fe" width="720px" height=auto />
 </p>
 
 - <I>S-TYPE</I>
@@ -408,8 +408,8 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
 
    - Tool Simulation:
 
-     <p align ="center">
- <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/235bdd67-e40c-48aa-8b5a-5c5f790199f4" width="720px" height=auto />
+<p align ="center">
+  <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/235bdd67-e40c-48aa-8b5a-5c5f790199f4" width="720px" height=auto />
 </p>
         
 - <I>B-TYPE</I>
@@ -454,8 +454,8 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
       
     - Tool Simulation:
        
-        <p align ="center">
- <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/c1eea0da-426f-4f19-96bd-c2e836e84337" width="720px" height=auto />
+<p align ="center">
+  <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/c1eea0da-426f-4f19-96bd-c2e836e84337" width="720px" height=auto />
 </p>
 
 - <I>J-TYPE</I>
@@ -502,8 +502,8 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
        
      - Tool Simulation:
 
-         <p align ="center">
- <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/a386f1b9-2cbb-4df2-a7b4-9b6ba5b526a7" width="720px" height=auto />
+<p align ="center">
+  <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/a386f1b9-2cbb-4df2-a7b4-9b6ba5b526a7" width="720px" height=auto />
 </p>
 
 - <I>U-TYPE</I>
@@ -546,6 +546,6 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
 
   - Tool Simulation:
 
-      <p align ="center">
- <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/c62b6d4c-5b38-4646-9fc7-018d38215253" width="720px" height=auto />
+<p align ="center">
+  <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/c62b6d4c-5b38-4646-9fc7-018d38215253" width="720px" height=auto />
 </p>
