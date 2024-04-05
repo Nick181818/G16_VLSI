@@ -95,7 +95,7 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
 * <i><b>Increased Throughput</i></b>: Pipelining enables multiple instructions to be processed simultaneously, enhancing the overall throughput of the CPU.
 * <i><b>Improved Efficiency</i></b>: Concurrent execution of instructions reduces idle time in the CPU, making better use of resources.
 * <i><b>Enhanced Performance</i></b>: By breaking down instruction execution into smaller stages, pipelining speeds up the overall execution of instructions.
-* <i><b>Resource Utilization<i><b>: It allows the CPU to operate at a higher clock frequency by leveraging parallel processing, thereby utilizing resources more efficiently.
+* <i><b>Resource Utilization</i></b>: It allows the CPU to operate at a higher clock frequency by leveraging parallel processing, thereby utilizing resources more efficiently.
 
 
 
