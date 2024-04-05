@@ -6,14 +6,14 @@
 
 
 <h3 align="center">SURE Trust - Skill Upgradation for Rural-youth Empowerment Trust</h3>
-  <h2> Course Name </h2>
+  <h2>G16 - VLSI</h2>
 </div>
 
 # Course Report
 
-## Name: [Your Name]
+## Name: Mohammed Touheed
 
-## Qualifications: [Your Qualifications]
+## Qualifications: B.Tech Final Year
 
 Welcome to the course report for the [Course Name]! This README document provides an overview of the course, its mini projects and final project.
 
@@ -23,5 +23,6 @@ Below is a table summarizing the mini projects and final project completed durin
 
 | Description                               | Link                                    |
 |-------------------------------------------|-----------------------------------------|
-| Mini Projects: [Project Description]     | [Project Link]                         |
-| Final Project: [Project Description]     | [Project Link]                         |
+| Mini Projects 1: HDL BITS     | [Project Link] ( https://github.com/touheed1829/G16_VLSI/tree/main/Mini%20Projects/Mohammed/01_Minor  )                    |
+| Mini Projects 2: DESIGN OF AN ASYNCHRONOUS FIFO     | [Project Link]   (https://github.com/touheed1829/G16_VLSI/tree/main/Mini%20Projects/Mohammed/02_Minor              )      |
+| Final Project: STRV32I RISCV PROCESSOR     | [Project Link] (https://github.com/touheed1829/G16_VLSI/tree/main/Final%20Capstone%20Project/Mohammed  )                       |   
