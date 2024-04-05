@@ -3,6 +3,9 @@ In this design all parts are desgin in different module. Here have two sunchroni
 And the testbench is written in system verilog.
 and also in verilog
 
+# Problem Statement
+    Write verilog code for Asynchronous FIFO and show the simulation waveform.
+
 # Contents
 
 * Introduction 
@@ -13,11 +16,13 @@ and also in verilog
 
 * Asynchronous FIFO Pointers
 
-* Synchronizers & Binary Gray Counter
+* Synchronizer
 
 * Full & Empty Logic Blocks
 
-* Simulation
+* Simulation waveform
+
+* Description
 
 
 # Introduction
@@ -32,12 +37,11 @@ One common technique for designing an asynchronous FIFO is to use Gray code poin
 
 # FIFO Structure
 
-![image](https://user-images.githubusercontent.com/72481400/114535379-9c257180-9c6d-11eb-972d-fcfaf2aca1eb.png)
+![alt text](IMG_20240323_104730-1.jpg)
 
 # Architecture
 
-![image](https://user-images.githubusercontent.com/72481400/114535533-caa34c80-9c6d-11eb-8619-e6a7f10f8114.png)
-
+![alt text](IMG_20240323_104819.jpg)
 
 # Asynchronous FIFO Pointers
 
@@ -54,24 +58,14 @@ The read pointer always points to the current FIFO word to be read. The fact tha
 
 # Synchroniser using two flip flop
 
-
-![image](https://user-images.githubusercontent.com/72481400/111077754-49468600-8518-11eb-9bfd-87d57d6dcd14.png)
-
-
-
-
-
-# Synchronizers & Binary Gray Counter
-
 Synchronizers are very simple in operation; they are made of 2 D Flip Flop’s.As the FIFO is operating at 2 different clock domains so there is a need to synchronize the Write and Read pointers for generating empty and full logic which in turn is used for addressing the FIFO memory.
 
-The Figure below shows how synchronization takes place; the logic behind this is very simple
-
-![image](https://user-images.githubusercontent.com/72481400/114535966-3dacc300-9c6e-11eb-9097-12b84d2a061f.png)
-
-![image](https://user-images.githubusercontent.com/72481400/114535982-430a0d80-9c6e-11eb-8aa4-e6f910819907.png)
-
 We need to design a counter which can give Binary and Gray output’s, the need for Binary counter is to address the FIFO MEMORY i.e. Write and Read address. And the need of Gray counter is for addressing Read and Write pointers.
+
+
+![alt text](1711534870806.jpg)
+
+
 
 
 # Full & Empty Logic Block
@@ -80,11 +74,9 @@ When the status counter reaches the maximum FIFO depth it will assert FIFO full 
 
 ![image](https://user-images.githubusercontent.com/72481400/114536217-7b115080-9c6e-11eb-90d2-5df89f42e764.png)
 
+# Simulation waveform
 
-# Simulation waveform-
-
-
-![image](https://user-images.githubusercontent.com/72481400/111078289-b0fdd080-851a-11eb-954f-7070e6de9af6.png)
+![alt text](IMG_20240321_224424.png)
 
 # Description
 
