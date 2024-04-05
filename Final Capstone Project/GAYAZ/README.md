@@ -135,8 +135,8 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
 # <i><b> OUTPUT</i></b>
 
 *  <i><b>R-Type </i></b>
+These instructions operate on data held in registers. It cover arithmetic (such as addition, subtraction), logical (AND, OR, XOR), and shift operations sll (logical left shift), srl (logical right shift), etc.
 
-R-type instructions involve operation between two operands stored in two on-chip registers. The fetched instruction should provide the address to the two operands and help the processor to decode the type of operation to be performed.
 
 - **EXAMPLE**
        - Instruction: add x28, x12, x13
@@ -169,7 +169,7 @@ R-type instructions involve operation between two operands stored in two on-chip
 
 *  <i><b>I-Type </i></b>
 
-I-type instructions involve operation between two  operands, one stored in an on-chip register and the other is an immediate operand available in the instruction itself. The fetched instruction should provide the address to the operand and help the processor to decode the type of operation to be performed and the immediate value is given to the processor as a second operand. Note: We must not ignore the fact that the immediate value can be maximum of 12-bits, as per the field size decided by the instruction format. This issue is solved later when we use AUIPC/LUI instructions.
+I-type instructions execute operations like immediate arithmetic (addition, subtraction) and immediate logical operations on values loaded from memory or registers. The operations like addi (add immediate), subi (subtract immediate), andi (AND immediate), ori (OR immediate), lw (load word), sw (store word), etc.
 
 - **EXAPMLE**
       - Instruction: addi x10, x11, 2
@@ -201,7 +201,7 @@ I-type instructions involve operation between two  operands, one stored in an on
 
 *  <i><b>S-Type </i></b>
 
- S-Type instructions in the RISC-V architecture enable the storing of register values into memory at specific offsets determined by immediate values within the instruction. These instructions facilitate the interaction between registers and memory, allowing data to be stored at calculated memory addresses. For instance, the sw (store word) instruction takes a value from a register and writes it into memory at an address derived by adding the immediate value to a base address obtained from a register. S-Type instructions are fundamental for memory manipulation within the RISC-V architecture.
+ S-Type instructions in the RISC-V architecture primarily used for storing values in memory locations. It store a register value into memory at an offset determined by an immediate value.
 
 - **EXAMPLE**
       - Instruction: sh x12, 0x6(x10)
@@ -232,7 +232,9 @@ I-type instructions involve operation between two  operands, one stored in an on
 
 *  <i><b>B-Type </i></b>
 
-The B-Type instructions in RISC-V architecture are responsible for conditional branching, enabling the processor to change the flow of execution based on specific conditions. These instructions utilize immediate values to determine the offset for branching, allowing the program to jump to a new address if a certain condition is met. For instance, the beq (branch if equal) instruction compares two registers and, if they are equal, calculates the target address by adding the immediate offset to the current program counter. B-Type instructions are pivotal for implementing conditional logic and enabling control flow within RISC-V programs.
+The B-Type instructions in RISC-V architecture are execute conditional branches based on comparisons.
+Employ immediate values for branching, facilitating conditional jumps.
+
 
 - **EXAMPLE**
       - Instruction: bltu x10, x12, 0x14
@@ -265,7 +267,10 @@ The B-Type instructions in RISC-V architecture are responsible for conditional b
 
 * <i><b>J-Type </i></b>
 
-The J-Type instructions in RISC-V architecture are responsible for unconditional jumping or jumping to a new address without any condition checks. They facilitate the transfer of control to a new location by using a target address derived from the immediate value within the instruction. For instance, the jal (jump and link) instruction sets the program counter to a new address formed by combining the immediate offset with the current program counter value, allowing the processor to jump to a different part of the code while also saving the address of the next instruction in a designated register (usually the link register). J-Type instructions are essential for implementing function calls, loops, and other forms of non-conditional jumps in RISC-V programs.
+The J-Type instructions in RISC-V architecture are responsible  for altering the program flow.
+JAL (Jump and Link) stores the address of the next instruction into a register and jumps to a calculated address.
+JALR (Jump and Link Register) jumps to an address stored in a register and stores the return address in a specified register.
+
 
 - **EXAMPLE**
       - Instruction: jalr x10, x12, 0x1
@@ -301,7 +306,8 @@ The J-Type instructions in RISC-V architecture are responsible for unconditional
 
 * <i><b>U-type</i></b>
 
-The U-Type instructions in RISC-V architecture are designed for unconditional immediate operations. These instructions facilitate the addition of an immediate value to the program counter to generate a new target address for execution. The U-Type instructions allow for the direct manipulation of the program counter by using an immediate value to form a new address. For instance, the lui (load upper immediate) instruction loads a 20-bit immediate value into the upper 20 bits of a register, effectively setting the register to the immediate value shifted left by 12 bits. U-Type instructions are fundamental for immediate operations that involve setting specific upper bits of a register or generating immediate values for calculations or address formation in RISC-V programs.
+The U-Type instructions in RISC-V architecture are designed for unconditional immediate value-based operations.
+Mainly deal with setting or manipulating large immediate values in the upper bits of a register.
 
 - **EXAMPLE**
     - Instruction: lui x12, 0x12345
