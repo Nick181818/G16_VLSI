@@ -1,17 +1,18 @@
-# Final Capstone Project Riscv-32I
+# **Final Capstone Project Riscv-32I**
 
-  ## <b>Sure Trust RiscV-32I</b>
+  ## **Sure Trust RiscV-32I</b>**
 
-   + $STRV32I is actually a RISC-V. RISC-V 32 refers to the 32-bit version of the RISC-V instruction set architecture (ISA).$ 
-   + $Like its 64-bit counterpart, RISC-V 32 is based on the principles of Reduced Instruction Set Computing (RISC).$
-   + $RISC-V 32 is a version of the RISC-V instruction set architecture that operates with 32-bit data and addresses. $
+   + $STRV32I$ $is$ $actually$ $a$ $RISC-V$
+   + $RISC-V$ $32$ $refers$ $to$ $the$ $32-bit$ $version$ $of$ $the$ $RISC-V$ $instruction$ $set$ $architecture$ [ISA](https://riscv.org/wp-content/uploads/2019/12/riscv-spec-20191213.pdf)
+   + $Like$ $its$ $64-bit$ $counterpart$, $RISC-V$ $32$ $is$ $based$ $on$ $the$ $principles$ $of$ $Reduced$ $Instruction$ $Set$ $Computing$ $(RISC).$
+   + $RISC-V$ $32$ $is$ $a$ $version$ $of$ $the$ $RISC-V$ $instruction$ $set$ $architecture$ $that$ $operates$ $with$ $32-bit$ $data$ $and$ $addresses.$
 
-   + $It  prioritizes simplicity and efficiency in processor design. RISC-V 32, like its 64-bit counterpart, is modular, open-source,    and allows for optional extensions to support specific functionalities.$ 
-   + $It's suitable for a wide range of applications, from embedded systems to smartphones, offering versatility and flexibility.$
+   + $It$  $prioritizes$ $simplicity$ $and$ $efficiency$ $in$ $processor$ $design.$ $RISC-V$ $32$, $like$ $its$ $64-bit$ $counterpart$, $is$ $modular$, $open-source$, $and$ $allows$ $for$ $optional$ $extensions$ $to$ $support$ $specific$ $functionalities.$ 
+   + $It's$ $suitable$ $for$ $a$ $wide$ $range$ $of$ $applications$, $from$ $embedded$ $systems$ $to$ $smartphones$, $offering$ $versatility$ $and$ $flexibility.$
 
   
 
-  ## <b> CONTENTS </b>
+  ## **CONTENTS**
 
   - [x] DESIGN SPECIFICATIONS
   - [x] Deliverables
@@ -19,26 +20,25 @@
   - [x] INTRODUCTION
   - [x] STRV32I STRCUTURE
   - [x] OPERATION
-  - [x] INSTRUCTIONS
-  - [x] OUTPUT  
+  - [x] INSTRUCTIONS WITH OUTPUT WAVEFORMS
 
-  ## <b>DESIGN SPECIFICATIONS</b>
+  ## **DESIGN SPECIFICATIONS**
 
-   Design a 3-stage pipelined RISC-V processor that works on RV32I ISA.
+   $Design$ $a$ $3-stage$ $pipelined$ $RISC-V$ $processor$ $that$ $works$ $on$ $RV32I$ [ISA](https://riscv.org/wp-content/uploads/2019/12/riscv-spec-20191213.pdf)
 
-1. Interface:
+1. ***Interface:***
 
   - 	clk_in: System clock.
 
   - 	rst_in: Active high and synchronous system reset.
 
-2.	Instruction Cache Interface:
+2. ***Instruction Cache Interface:***
 
   - 	imaddr_out: Carries 32-bit target address to icache.
 
   - 	instr_in: 32-bit instruction fetched from icache.
 
-3.	Data Cache Interface:
+3. ***Data Cache Interface:***
 
   - 	dmwr_req_out: Write request signal to dcache, when high indicates a write request to dcache while being low it indicates a read request. This is a single bit signal.
 
@@ -51,7 +51,7 @@
   - 	dmwr_mask_out: This is a 4-bit mask signal that decides the bits to be masked during the dcache write operation.
 
 
-  ####  Input And Output Description
+  ####  $Input$ $And$ $Output$ $Description$
   |Port name |Direction|Type|Description|
   |---|---|---|---|
   |`clk_in`|input| |System Clock|
@@ -65,63 +65,64 @@
   |`dmdata_out`|output| [31:0]|Data output to dcache|
 
 
-  ##  <b> Deliverable </b>
+  ##  **Deliverables**
 
-  + **Performance Analysis:** 
+  + ***Performance Analysis:***
 
-      + $Clock cycle count, throughput, and latency for various instructions and instruction sequences.$
+      + Clock cycle count, throughput, and latency for various instructions and instruction sequences.
 
-  + **Pipeline Diagram:** 
+  + ***Pipeline Diagram:***
 
-    + $Illustration of pipeline stages and instruction flow.$
+    + Illustration of pipeline stages and instruction flow.
 
-   + **Hazard Detection and Resolution:**
+   + ***Hazard Detection and Resolution:***
     
-      + $Explanation of data hazards, control hazards, and structural hazards detection and mitigation.$
+      + Explanation of data hazards, control hazards, and structural hazards detection and mitigation.
 
-  + **Memory Subsystem:**
+  + ***Memory Subsystem:***
     
-    + $Description of memory access handling, including memory hierarchy and cache structure.$
+    + Description of memory access handling, including memory hierarchy and cache structure.
 
-  + **Forwarding and Stall Mechanisms:**
+  + ***Forwarding and Stall Mechanisms:***
     
-    +  $Description of data forwarding and stall mechanisms for maintaining correct instruction execution.$
+    +  Description of data forwarding and stall mechanisms for maintaining correct instruction execution.
 
-  + **Exception Handling:**
+  + ***Exception Handling:***
   
-    + $Explanation of how exceptions, interrupts, traps, and system calls are handled.$
+    + Explanation of how exceptions, interrupts, traps, and system calls are handled.
 
-  + **Verification Plan:**
+  + ***Verification Plan:***
   
-    + $Methodology and tools used for verifying the correctness of the processor design.$
+    + Methodology and tools used for verifying the correctness of the processor design.
 
 
 
   ## **FILES IN THIS SUBMISSIONS**
 
-    ```
-    ├── alu_unit.v
-    ├── branch_unit.v
-    ├── control_unit.v
-    ├── decoder.v
-    ├── immediate_adder.v
-    ├── immediate_generator.v
-    ├── load_unit.v
-    ├── pc_unit.v
-    ├── Readme.md
-    ├── reg_block_1.v
-    ├── reg_block_2.v
-    ├── reg_file.v
-    ├── Riscv_Top.v
-    ├── Riscv_tb.v
-    ├── store_unit.v
-    ├── WB_mux_selection_unit.v
-    ├── wr_en_gen.v
-    └── Instr_File.mem
-    ```
+```
+├── alu_unit.v
+├── branch_unit.v
+├── control_unit.v
+├── decoder.v
+├── immediate_adder.v
+├── immediate_generator.v
+├── load_unit.v
+├── pc_unit.v
+├── Readme.md
+├── reg_block_1.v
+├── reg_block_2.v
+├── reg_file.v
+├── Riscv_Top.v
+├── Riscv_tb.v
+├── store_unit.v
+├── WB_mux_selection_unit.v
+├── wr_en_gen.v
+└── Instr_File.mem
+```
+
      
-  - **Readme.md** - This is a markdown file which contains all the report of project.
-  - **Riscv_Top.v** - This is the Top Module and it contains all the Instantiations of 
+  - **[Readme.md](https://github.com/touheed1829/G16_VLSI/blob/main/Final%20Capstone%20Project/Mohammed/README.md)** - This is a markdown file which contains all the report of project.
+  - **[Riscv_Top.v](https://github.com/touheed1829/G16_VLSI/tree/main/Final%20Capstone%20Project/Mohammed/RTL_src/Riscv_Top)** - This is the Top Module and it contains all the Instantiations of 
       - `alu_unit.v`
       - `branch_unit.v` 
       - `control_unit.v`
@@ -136,20 +137,12 @@
       - `store_unit.v`
       - `WB_mux_selection_unit.v`
       - `wr_en_gen.v`
-  - **Riscv_tb.v** - This is a test bench file recquired to play along the input values.
-   - **Instr_File.mem** - This is an Instruction File which has instruction operations to do while executing a program.
+  - **[Riscv_tb.v](https://github.com/touheed1829/G16_VLSI/tree/main/Final%20Capstone%20Project/Mohammed/RTL_src/Riscv_Test_Bench)** - This is a test bench file recquired to play along the input values.
+   - **[Instr_src](https://github.com/touheed1829/G16_VLSI/tree/main/Final%20Capstone%20Project/Mohammed/RTL_src/Instruction_src)** - This is an Instruction File which has instruction operations to do while executing a program.
 
-  ## <b>INTRODUCTION</b>
+  ## **INTRODUCTION**
     
   Computers are built on specific architectural designs that dictate how instructions are executed and processed. Two primary architectures exist: Complex Instruction Set Computer (CISC) and Reduced Instruction Set Computer (RISC).
-
-
-#### Block Diagram
-
-<p align ="center">
- <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/baa5520d-67a2-4878-abac-f81363cc4e44" width="720px" height=auto />
-</p>
-
 
 ***RISC (Reduced Instruction Set Computer)***
 RISC architecture, on the contrary, focuses on a reduced set of simple instructions, each typically executed in a single clock cycle. This simplicity results in faster execution and improved performance.
@@ -157,35 +150,52 @@ RISC architectures prioritize efficiency by favoring a smaller set of instructio
 
 RISC-V stands as a cutting-edge open-source instruction set architecture (ISA) that embodies simplicity, adaptability, and versatility. Developed at the University of California, Berkeley, the RISC-V ISA was introduced in 2010 as an academic project aiming to address the limitations of existing architectures and provide a platform for innovation in computer architecture.
 
+#### Block Diagram
+
+<p align ="center">
+ <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/baa5520d-67a2-4878-abac-f81363cc4e44" width="720px" height=auto />
+</p>
+
  #### <b>RISC architecture consists of a series of stages that an instruction goes through during its execution:</b>
-1.	<i><b>Instruction Fetch</i></b>: The CPU fetches the instruction from memory.
-2.	<i><b>Decode</i></b>: The instruction is decoded to determine the operation to be performed.
-3.	<i><b>Execute</i></b>: The CPU executes the operation specified by the instruction.
-4.	<i><b>Memory Access</i></b>: If necessary, the CPU accesses memory to read or write data.
-5.	<i><b>Write Back</i></b>: The CPU writes the results of the operation back to the appropriate register or memory location.
+1. ***Instruction Fetch***:
+	 - The CPU fetches the instruction from memory.
+2. ***Decode***:
+	 -  The instruction is decoded to determine the operation to be performed.
+3. ***Execute***:
+	 - The CPU executes the operation specified by the instruction.
+4. ***Memory Access***:
+	 - If necessary, the CPU accesses memory to read or write data.
+5. ***Write Back***:
+	 - The CPU writes the results of the operation back to the appropriate register or memory location.
 
 > [!IMPORTANT]
 > **Why RISCV?**
-> RISC architecture, on the contrary, focuses on a reduced set of simple instructions, each typically executed in a single clock cycle.
-> This simplicity results in faster execution and improved performance.
-> RISC architectures prioritize efficiency by favoring a smaller set of instructions, emphasizing faster instruction execution, and enabling better pipelining and parallelism.
+
+> $RISC$ $architecture$, $on$ $the$ $contrary$, $focuses$ $on$ $a$ $reduced$ $set$ $of$ $simple$ $instructions$, $each$ $typically$ $executed$ $in$ $a$ $single$ $clock$ $cycle.$
+> $This$ $simplicity$ $results$ $in$ $faster$ $execution$ $and$ $improved$ $performance.$
+> $RISC$ $architectures$ $prioritize$ $efficiency$ $by$ $favoring$ $a$ $smaller$ $set$ $of$ $instructions$, $emphasizing$ $faster$ $instruction$ $execution$, $and$ $enabling$ $better$ $pipelining$ $and$ $parallelism$.$
   
 > [!Note] 
-> RISC architectures include ARM and MIPS.
+> $RISC$ $architectures$ $include$ $ARM$ $and$ $MIPS.$
 
 
 ##	<b>Advantages of RISC-V</b>
 RISC-V stands as a beacon in modern computing due to its revolutionary features and adaptable nature, encompassing several advantages:
 
-*	Openness and Accessibility: RISC-V's open-source nature democratizes access to the ISA, enabling innovation without licensing fees or restrictions.
+- ***Openness and Accessibility***:
+  - RISC-V's open-source nature democratizes access to the ISA, enabling innovation without licensing fees or restrictions.
 
-*	Flexibility and Customizability: The modular design allows users to tailor solutions by incorporating custom instructions or extensions, fostering adaptability across diverse applications.
+- ***Flexibility and Customizability***:
+   - The modular design allows users to tailor solutions by incorporating custom instructions or extensions, fostering adaptability across diverse applications.
 
-*	Scalability and Versatility: Supporting various versions like RV32I, RV64I, and RV128I, RISC-V addresses different performance needs and computing environments.
+- ***Scalability and Versatility***:
+   - Supporting various versions like RV32I, RV64I, and RV128I, RISC-V addresses different performance needs and computing environments.
 
-*	Elegance and Simplicity: RISC-V's streamlined design emphasizes a reduced instruction set, enhancing predictability, ease of implementation, and efficiency.
+- ***Elegance and Simplicity***:
+   - RISC-V's streamlined design emphasizes a reduced instruction set, enhancing predictability, ease of implementation, and efficiency.
 	
-*	High Extensibility: A pivotal feature of RISC-V is its exceptional extensibility. This attribute enables users to expand the instruction set architecture by incorporating custom instructions or entire extensions. Its extensibility allows for the addition of new features, optimizations, and specialized functionalities, ensuring adaptability to evolving technological requirements and computing paradigms.
+- ***High Extensibility***:
+   - A pivotal feature of RISC-V is its exceptional extensibility. This attribute enables users to expand the instruction set architecture by incorporating custom instructions or entire extensions. Its extensibility allows for the addition of new features, optimizations, and specialized functionalities, ensuring adaptability to evolving technological requirements and computing paradigms.
 
  
 
@@ -214,7 +224,7 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
 #### ***4] Immediate Adder:***
  - It takes the PC_in and adds it with the immediate value produced by immediate generator and hence successfully generates new value of PC  
 
-#### ***5]  Write Enable Generator:
+#### ***5]  Write Enable Generator:***
  - It generates the write enable signals, which will decide whether we can access the register file for writing / updating any value
 
 
@@ -265,7 +275,7 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
  - For wb_mux_out, the value will be assigned to depending on value of wb_mux_sel_reg_in 
 
 
-# **INSTRUCTIONS**
+# **INSTRUCTIONS WITH OUTPUT WAVEFORMS**
 
 
 -  <i>R-TYPE</i>
@@ -276,7 +286,7 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
        - Instruction: add x28, x12, x13
         - Description: The contents of register x1 and x12 are to be added and stored back to the x2 register.
 
-     - As per the ISA,
+     - As per the [ISA](https://riscv.org/wp-content/uploads/2019/12/riscv-spec-20191213.pdf),
 
         - Hex equivalent: 00d60e33
          
@@ -322,7 +332,7 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
       - Instruction: addi x10, x11, 2
       - Description: The contents of register x11 and immediate value 2 are to be added and stored back to the x10 register.
 
-    - As per the ISA,
+    - As per the [ISA](https://riscv.org/wp-content/uploads/2019/12/riscv-spec-20191213.pdf),
 
       - Hex equivalent: 00d60e33
       
@@ -366,7 +376,7 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
       - Instruction: sh x12, 0x6(x10)
       - Description: The contents of register x12 are stored to data memory(dcache) via the store unit. Since this is sh instruction, only half word is loaded to the memory location [6H + [x10]], content of [x10] in this case is 2H. Hence, the destination address in this case is 8H.
 
-    - As per the ISA,
+    - As per the [ISA](https://riscv.org/wp-content/uploads/2019/12/riscv-spec-20191213.pdf),
 
         - Hex equivalent: 00258513
          
@@ -412,7 +422,7 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
       - X10 = 2
       - X12 = 3 Therefore, a branch is taken. Hence PC Value changes to 18H + 14H = 2C
 
-    - As per the ISA,
+    - As per the [ISA](https://riscv.org/wp-content/uploads/2019/12/riscv-spec-20191213.pdf),
 
       - Hex equivalent: 00c56a63
        
@@ -459,7 +469,7 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
 
        -  X12 = 3 A branch is taken. Hence, PC Value changes to 3H + 1H = 4H
 
-    - As per the ISA,
+    - As per the [ISA](https://riscv.org/wp-content/uploads/2019/12/riscv-spec-20191213.pdf),
 
       - Hex equivalent: 00160567
        
@@ -504,7 +514,7 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
     - Instruction: lui x12, 0x12345
     - Description: The immediate value 0x12345 is stored in upper bytes of x12 register. The main objective of LUI instruction is to add immediate values up to 20 bits which was not possible with I-type instructions.
 
-  - As per the ISA,
+  - As per the [ISA](https://riscv.org/wp-content/uploads/2019/12/riscv-spec-20191213.pdf),
 
     - Hex equivalent: 12345637
      
