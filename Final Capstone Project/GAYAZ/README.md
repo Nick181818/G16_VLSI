@@ -272,11 +272,11 @@ JAL (Jump and Link) stores the address of the next instruction into a register a
 JALR (Jump and Link Register) jumps to an address stored in a register and stores the return address in a specified register.
 
 - **EXAMPLE**
-      - Instruction: jalr x10, x12, 0x1
+    - Instruction: jalr x10, x12, 0x1
 
-      - Description: The control is passed to PC 0x4 unconditionally. The previous PC+4H value is stored in destination register X10.
+    - Description: The control is passed to PC 0x4 unconditionally. The previous PC+4H value is stored in destination register X10.
 
-      -  X12 = 3 A branch is taken. Hence, PC Value changes to 3H + 1H = 4H
+    -  X12 = 3 A branch is taken. Hence, PC Value changes to 3H + 1H = 4H
 
     - As per the ISA,
 
