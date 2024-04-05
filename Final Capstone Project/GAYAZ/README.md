@@ -176,7 +176,7 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
 
  I-type instructions involve operation between two  operands, one stored in an on-chip register and the other is an immediate operand available in the instruction itself. The fetched instruction should provide the address to the operand and help the processor to decode the type of operation to be performed and the immediate value is given to the processor as a second operand. Note: We must not ignore the fact that the immediate value can be maximum of 12-bits, as per the field size decided by the instruction format. This issue is solved later when we use AUIPC/LUI instructions.
 
-    - **EXAPMLE**
+   - **EXAPMLE**
       - Instruction: addi x10, x11, 2
       - Description: The contents of register x11 and immediate value 2 are to be added and stored back to the x10 register.
 
@@ -239,7 +239,7 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
 
  The B-Type instructions in RISC-V architecture are responsible for conditional branching, enabling the processor to change the flow of execution based on specific conditions. These instructions utilize immediate values to determine the offset for branching, allowing the program to jump to a new address if a certain condition is met. For instance, the beq (branch if equal) instruction compares two registers and, if they are equal, calculates the target address by adding the immediate offset to the current program counter. B-Type instructions are pivotal for implementing conditional logic and enabling control flow within RISC-V programs.
 
-    - **EXAMPLE**
+  - **EXAMPLE**
       - Instruction: bltu x10, x12, 0x14
       - Description: The control is passed to PC 0x14 if the contents of memory location [x10] is less than that of [x12] (unsigned comparison). These are conditional jump statements in the RV32I instruction set.
       - X10 = 2
@@ -272,7 +272,7 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
 
  The J-Type instructions in RISC-V architecture are responsible for unconditional jumping or jumping to a new address without any condition checks. They facilitate the transfer of control to a new location by using a target address derived from the immediate value within the instruction. For instance, the jal (jump and link) instruction sets the program counter to a new address formed by combining the immediate offset with the current program counter value, allowing the processor to jump to a different part of the code while also saving the address of the next instruction in a designated register (usually the link register). J-Type instructions are essential for implementing function calls, loops, and other forms of non-conditional jumps in RISC-V programs.
 
-    - **EXAMPLE**
+- **EXAMPLE**
        - Instruction: jalr x10, x12, 0x1
 
       -  Description: The control is passed to PC 0x4 unconditionally. The previous PC+4H value is stored in destination register X10.
