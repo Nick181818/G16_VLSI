@@ -202,7 +202,7 @@ I-type instructions involve operation between two  operands, one stored in an on
 
 
 <p align ="center">
- <img src="https://github.com/GayazPatan/Images/assets/156210984/dfb28c45-a9da-407c-a922-57173f3396a2" width="720px" height=auto />
+ <img src="https://github.com/GayazPatan/Images/assets/156210984/2067f565-b297-41d6-8411-07900472a724" width="720px" height=auto />
 </p>
 
 *  <i><b>S-Type </i></b>
@@ -233,7 +233,7 @@ I-type instructions involve operation between two  operands, one stored in an on
         - In the third cycle, the addition is performed and data is sent to on-chip registers for storage.
 
 <p align ="center">
- <img src="https://github.com/GayazPatan/Images/assets/156210984/dfcc355b-ca7d-4a6a-83b6-721eaba28747" width="720px" height=auto />
+ <img src="https://github.com/GayazPatan/Images/assets/156210984/a051f898-db8e-41bd-b978-ecf9da472c21" width="720px" height=auto />
 </p>
 
 *  <i><b>B-Type </i></b>
