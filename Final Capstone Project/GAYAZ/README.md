@@ -172,8 +172,8 @@ These instructions operate on data held in registers. It cover arithmetic (such 
 
 
 - **EXAMPLE**
-       - Instruction: add x28, x12, x13
-       - Description: The contents of register x1 and x12 are to be added and stored back to the x2 register.
+     - Instruction: add x28, x12, x13
+     - Description: The contents of register x1 and x12 are to be added and stored back to the x2 register.
 
      - As per the ISA,
 
@@ -205,8 +205,9 @@ These instructions operate on data held in registers. It cover arithmetic (such 
 I-type instructions execute operations like immediate arithmetic (addition, subtraction) and immediate logical operations on values loaded from memory or registers. The operations like addi (add immediate), subi (subtract immediate), andi (AND immediate), ori (OR immediate), lw (load word), sw (store word), etc.
 
 - **EXAPMLE**
-      - Instruction: addi x10, x11, 2
-      - Description: The contents of register x11 and immediate value 2 are to be added and stored back to the x10 register.
+    - Instruction: addi x10, x11, 2
+    - Description: The contents of register x11 and immediate value 2 are to be added and stored back to 
+      thex10 register.
 
     - As per the ISA,
     - Hex equivalent: 00258513
@@ -260,8 +261,8 @@ I-type instructions execute operations like immediate arithmetic (addition, subt
 
 
 - **EXAMPLE**
-      - Instruction: sh x12, 0x6(x10)
-      - Description: The contents of register x12 are stored to data memory(dcache) via the store unit. Since this is sh instruction, only half word is loaded to the memory location [6H + [x10]], content of [x10] in this case is 2H. Hence, the destination address in this case is 8H.
+    - Instruction: sh x12, 0x6(x10)
+    - Description: The contents of register x12 are stored to data memory(dcache) via the store unit. Since this is sh instruction, only half word is loaded to the memory location [6H + [x10]], content of [x10] in this case is 2H. Hence, the destination address in this case is 8H.
 
     - As per the ISA,
          
@@ -282,8 +283,8 @@ Employ immediate values for branching, facilitating conditional jumps.
 
 
 - **EXAMPLE**
-      - Instruction: bltu x10, x12, 0x14
-      - Description: The control is passed to PC 0x14 if the contents of memory location [x10] is less than that of [x12] (unsigned comparison). These are conditional jump statements in the RV32I instruction set.
+    - Instruction: bltu x10, x12, 0x14
+    - Description: The control is passed to PC 0x14 if the contents of memory location [x10] is less than that of [x12] (unsigned comparison). These are conditional jump statements in the RV32I instruction set.
       - X10 = 2
       - X12 = 3 Therefore, a branch is taken. Hence PC Value changes to 18H + 14H = 2C
 
@@ -319,9 +320,7 @@ JALR (Jump and Link Register) jumps to an address stored in a register and store
 - **EXAMPLE**
     - Instruction: jalr x10, x12, 0x1
 
-    - Description: The control is passed to PC 0x4 unconditionally. The previous PC+4H value is stored in destination register X10.
-
-    -  X12 = 3 A branch is taken. Hence, PC Value changes to 3H + 1H = 4H
+    - Description: The control is passed to PC 0x4 unconditionally. The previous PC+4H value is stored in destination register X10. X12 = 3 A branch is taken. Hence, PC Value changes to 3H + 1H = 4H
 
     - As per the ISA,
 
