@@ -1,7 +1,7 @@
 module top_module(
     input in,
     input [1:0] state,
-    output [1:0] next_state,
+    output reg [1:0] next_state,
     output out); //
 
     parameter A=0, B=1, C=2, D=3;

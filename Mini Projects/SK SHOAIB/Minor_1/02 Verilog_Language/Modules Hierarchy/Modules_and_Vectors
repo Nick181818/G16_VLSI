@@ -1,0 +1,23 @@
+module top_module ( 
+    input clk, 
+    input [7:0] d, 
+    input [1:0] sel, 
+    output reg [7:0] q 
+);
+    reg [7:0] p,r,s;
+
+    my_dff8 d1(.clk(clk),.d(d),.q(p));
+    my_dff8 d2(.clk(clk),.d(p),.q(r));
+    my_dff8 d3(.clk(clk),.d(r),.q(s));
+    
+    always@(*)
+        begin
+            case(sel) 
+                2'b01:begin q=p; end 
+                2'b10:begin q=r; end 
+                2'b11:begin q=s; end 
+                default:begin q=d; end 
+            endcase 
+        end
+        
+endmodule
