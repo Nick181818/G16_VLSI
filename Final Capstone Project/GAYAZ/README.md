@@ -260,7 +260,7 @@ I-type instructions execute operations like immediate arithmetic (addition, subt
         - In the third cycle, the addition is performed and data is sent to on-chip registers for storage.
 
 
--
+
 <p align ="center">
  <img src="https://github.com/GayazPatan/Images/assets/156210984/a051f898-db8e-41bd-b978-ecf9da472c21" width="720px" height=auto />
 </p>
@@ -273,9 +273,8 @@ Employ immediate values for branching, facilitating conditional jumps.
 
 - **EXAMPLE**
     - Instruction: bltu x10, x12, 0x14
-    - Description: The control is passed to PC 0x14 if the contents of memory location [x10] is less than that of [x12] (unsigned comparison). These are conditional jump statements in the RV32I instruction set.
-      - X10 = 2
-      - X12 = 3 Therefore, a branch is taken. Hence PC Value changes to 18H + 14H = 2C
+    - Description: The control is passed to PC 0x14 if the contents of memory location [x10] is less than that of [x12] (unsigned comparison). These are conditional jump statements in the RV32I instruction set. X10 = 2
+       X12 = 3 Therefore, a branch is taken. Hence PC Value changes to 18H + 14H = 2C
 
     - As per the ISA,
 
