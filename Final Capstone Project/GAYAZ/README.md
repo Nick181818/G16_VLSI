@@ -297,7 +297,7 @@ Employ immediate values for branching, facilitating conditional jumps.
       - In the third cycle, the same value is observed in wb_mux out as well. The new PC is forwarded in 2nd cycle itself to prevent pipeline stall. 
     
 <p align ="center">
- <img src="https://github.com/GayazPatan/Images/assets/156210984/55243375-73ea-4892-aa0d-0542f00367f3" width="720px" height=auto />
+ <img src="https://github.com/GayazPatan/Images/assets/156210984/5aa9bf98-0abe-4f72-9f06-4a05b3d0cdd0" width="720px" height=auto />
 </p>
 
 * <i><b>J-Type </i></b>
@@ -333,7 +333,7 @@ JALR (Jump and Link Register) jumps to an address stored in a register and store
       - The new PC is forwarded in 2nd cycle itself to prevent pipeline stall.
     
 <p align ="center">
- <img src="https://github.com/GayazPatan/Images/assets/156210984/6598d085-d010-473c-9bc0-b9fa3447f6f1" width="720px" height=auto />
+ <img src="https://github.com/GayazPatan/Images/assets/156210984/c546ed82-da62-4020-9ef1-72a3c7ca85ac" width="720px" height=auto />
 </p>
 
 * <i><b>U-type</i></b>
