@@ -17,17 +17,7 @@ Interface Details:
     - d)dmdata_out : This is the 32-bit to be written to dcache.During the "Store".
     - e)dmwr_mask_out : This is a 4-bit mask signal that decides the bits to be masked during the dcache write operation.
 
-     | Port name | Direction | Type | Description|
-     |:------------------|:----------------------|:----------------------|
-     |clk_in | input|    | System clock|
-     |rst_in | input|    | System reset|
-     |dmdata_in| input| [31:0]| Data input from dcache|
-     |instr_in| input| [31:0]|  Instruction input from icache|
-     |dmwr_req_out| output| | Write request to dcache|
-     |imaddr_out| output| [31:0]| Address output to icache|
-     |dmaddr_out| output| [31:0]| Address output to dcache|
-     |dmdata_out| output| [31:0]| Data output to dcache|
-     |dmwr_mask_out| output| [3:0]| Mask bits to dcache|
+   
   
  ## Introduction
 
@@ -42,8 +32,9 @@ Interface Details:
 
 ## Architecture of RISC-V processor
 
-<p align= "center">
-  <img src="https://github.com/Maniteja-muriki/Image/issues/3"
+<p align="center">
+ <img
+src=https://github.com/Maniteja-muriki/Image/issues/3#issue-2223266124
 width="720px" Height="auto">
 </p>
 
@@ -57,6 +48,7 @@ The proposed processor will complete all the five steps namely "Instruction Fetc
 
 - 1.PC Unit:-
 This block is responsible for retrieving the next instruction from the instruction memory. The Program Counter (PC) points to the current instruction, and after fetching, the PC is updated to the next instruction address.
+
 
 - 2.Decoder:-
  The fetched instruction is decoded to understand the operation to be performed. This involves identifying the operation code (opcode), source operands, destination register, and any immediate values.
@@ -73,8 +65,9 @@ This block is responsible for retrieving the next instruction from the instructi
  - 6.ALU unit:-
  This block executes the instruction. Arithmetic and logical operations are performed here. If the instruction is a branch, the EX block evaluates the branch condition and calculates the new PC value if needed.
 
- <p align= "center">
-   <img src="https://github.com/Maniteja-muriki/Image/issues/2"
+ <p align="center">
+  <img
+  src="https://github.com/Maniteja-muriki/Image/issues/2"
   width="720px"Height="auto">
   </p>
 
@@ -86,10 +79,21 @@ This block is responsible for retrieving the next instruction from the instructi
 
   - 9.Immediate adder:-
   It takes the PC_in and adds it with the immediate value produced by the immediate generator and hence successfully generates new value of PC.
-  
+ <p align="center">
+  <img
+  src="https://github.com/Maniteja-muriki/Image/issues/5#issue-2228301165"
+  width="720px"Height="auto">
+  </p>
+
+ 
   - 10.Write enable generator:-
   It generates the write enable signals,which will decide whether we can access the register file for writing/updating any value.
-
+ <p align="center">
+  <img
+  src="https://github.com/Maniteja-muriki/Image/issues/8#issue-2228455344"
+  width="720px"Height="auto">
+  </p>
+   
   - 11.Control Unit:-
  It has two states- Reset and Operation.If Reset=0,Controlunit operates in Operation mode and when Reset=1,it will be in reset state.
     - It flushes out the PC value in case of branch and jump instructions.
@@ -110,10 +114,22 @@ This block is responsible for retrieving the next instruction from the instructi
   - 15.Branch unit :-
 Branch conditions are conditional jumps.It will decide if a branch instruction must be taken or not.
     - It receives two operands from the Integer Register File,and based on the value of opcode and func3_in instruction fields,it decides the branch i.e. value of branch_out.
+ <p align = "center">
+  <img src="https://github.com/Maniteja-muriki/Image/issues/4#issue-2228274550" width="720px" Height="auto">
+</p>
 
   - 16.Register block 1:-
   It is an array of D-Flipflops used for synchronisation purpose so that all the signals of stage1 pass through it so that they are able to reach 2nd stage in 2nd clock cycle.
-
+ <p align="center">
+  <img
+  src="https://github.com/Maniteja-muriki/Image/issues/6#issue-2228452418"
+  width="720px"Height="auto">
+  </p>
   - 17.Register block 2:-
   It registers all the inputs and produces the outputs at the posedge of clock,if there is no reset,so that the signals of stage 2 can't reach stage 3 before 3rd clock cycle.
    - The block also integrates a 2:1 MUX with select-line as branch_taken_in.The LSB of iadder_out_reg is assigned with 0 if branch_taken_in is 1,else it is assigned with the registered value of iadder_in. 
+ <p align="center">
+  <img
+  src="https://github.com/Maniteja-muriki/Image/issues/7#issue-2228453362"
+  width="720px"Height="auto">
+  </p>
