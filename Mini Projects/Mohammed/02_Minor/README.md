@@ -119,7 +119,7 @@ One common technique for designing an asynchronous FIFO is to use Gray code poin
 
 # Asynchronous FIFO Pointers
 
-#### Write Unit:
+### Write Unit:
 
 The write pointer always points to the next word to be written; therefore, on reset, both pointers are set to zero, which also happens to be the next FIFO word location to be written.
 
@@ -127,7 +127,7 @@ The write pointer always points to the next word to be written; therefore, on re
   <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/aaba887b-0fa3-4552-b86f-5f31c98b98c5" width="720px" height="auto">
 </p>
 
-#### Read Unit:
+### Read Unit:
 
 The read pointer always points to the current FIFO word to be read. The fact that the read pointer is always pointing to the next FIFO word to be read means that the receiver logic does not have to use two clock periods to read the data word.
 
@@ -196,7 +196,7 @@ When the status counter reaches the maximum FIFO depth it will assert FIFO full 
 **_After 90 Clock Cycle Fifo Full gets 1_**
 
 <p align="center">
-  <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/4b3d6368-73ed-4374-abd1-1c5b75f3cafd">
+  <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/4b3d6368-73ed-4374-abd1-1c5b75f3cafd" width = "720px" heigth = "auto">
 </p>
 
 ### Section 2
@@ -206,11 +206,11 @@ When the status counter reaches the maximum FIFO depth it will assert FIFO full 
 **_Similarly after 90 Clcok Cycles Fifo Empty gets 1_**
 
 <p align="center">
-  <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/f5f9219e-d672-49fc-92e9-2378d7c03c01">
+  <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/f5f9219e-d672-49fc-92e9-2378d7c03c01" width = "720px" heigth = "auto">
 </p>
 
 ### Section 3
 This section shows simultenous reading and writing of data as both the read and write enable signal goes high.
 <p align="center">
-  <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/d94ba044-483c-40a9-9531-21db68f78cef">
+  <img src="https://github.com/touheed1829/PROJECTS/assets/142418059/d94ba044-483c-40a9-9531-21db68f78cef" width = "720px" heigth = "auto">
 </p>

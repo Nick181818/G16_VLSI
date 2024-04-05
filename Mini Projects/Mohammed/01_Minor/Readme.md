@@ -53,6 +53,7 @@ Each problem requires you to design a small circuit in Verilog. HDLBits gives yo
  + Latches and Filp Flops
  + Counters
  + Shift Registers
+ + Finite State Machines
 
  ## Verification Parts
  #### 1.Verification:Reading Simulations
