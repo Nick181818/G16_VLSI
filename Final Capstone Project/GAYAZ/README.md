@@ -173,7 +173,7 @@ These instructions operate on data held in registers. It cover arithmetic (such 
 
 - **EXAMPLE**
        - Instruction: add x28, x12, x13
-        - Description: The contents of register x1 and x12 are to be added and stored back to the x2 register.
+       - Description: The contents of register x1 and x12 are to be added and stored back to the x2 register.
 
      - As per the ISA,
 
