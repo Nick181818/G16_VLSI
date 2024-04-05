@@ -142,13 +142,13 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
 
 *  <i><b>R-Type </i></b>
 
-  R-type instructions involve operation between two operands stored in two on-chip registers. The fetched instruction should provide the address to the two operands and help the processor to decode the type of operation to be performed.
+R-type instructions involve operation between two operands stored in two on-chip registers. The fetched instruction should provide the address to the two operands and help the processor to decode the type of operation to be performed.
 
-     - **EXAMPLE**
-       - Instruction: add x28, x12, x13
-        - Description: The contents of register x1 and x12 are to be added and stored back to the x2 register.
+- **EXAMPLE**
+    - Instruction: add x28, x12, x13
+    - Description: The contents of register x1 and x12 are to be added and stored back to the x2 register.
 
-     - As per the ISA,
+    - As per the ISA,
         - Hex equivalent: 00d60e33
         - Bin equivalent: 00000000110101100000111000110011
         - Opcode: 011_0011
@@ -161,7 +161,7 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
         - Machine cycles taken: 1
         - No. of clock cycles: 3
 
-     - Working:
+    - Working:
          
         - In the first cycle, the address from the processor is sent to the icache and instruction reaches the processor in the second cycle.
         - In next cycle, the instruction is decoded and data is read from the on-chip registers
