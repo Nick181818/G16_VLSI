@@ -97,6 +97,14 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
 * <i><b>Enhanced Performance</i></b>: By breaking down instruction execution into smaller stages, pipelining speeds up the overall execution of instructions.
 * <i><b>Resource Utilization</i></b>: It allows the CPU to operate at a higher clock frequency by leveraging parallel processing, thereby utilizing resources more efficiently.
 
+#### Deliverables:
+* <i><b>Performance Analysis</i></b>: Clock cycle count, throughput, and latency for various instructions and instruction sequences.
+* <i><b>Pipeline Diagram</i></b>: Illustration of pipeline stages and instruction flow.
+* <i><b>Hazard Detection and Resolution</i></b>: Explanation of data hazards, control hazards, and structural hazards detection and mitigation.
+* <i><b>Memory Subsystem</i></b>: Description of memory access handling, including memory hierarchy and cache structure.
+* <i><b>Forwarding and Stall Mechanisms</i></b>: Description of data forwarding and stall mechanisms for maintaining correct instruction execution.
+* <i><b>Exception Handling</i></b>: Explanation of how exceptions, interrupts, traps, and system calls are handled.
+* <i><b>Verification Plan</i></b>: Methodology and tools used for verifying the correctness of the processor design.
 
 
 # <i><b>OPERATION</i></b>
