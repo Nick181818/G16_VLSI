@@ -170,7 +170,7 @@ R-type instructions involve operation between two operands stored in two on-chip
         
         
 <p align ="center">
- <img src="https://github.com/GayazPatan/Images/assets/156210984/fbeffdbb-717f-4b36-aad4-7b20a4092d91" width="720px" height=auto />
+ <img src="https://github.com/GayazPatan/Images/assets/156210984/11ee78aa-f579-4dd9-8d98-3a11ed5651d5" width="720px" height=auto />
 </p>
 
 *  <i><b>I-Type </i></b>
