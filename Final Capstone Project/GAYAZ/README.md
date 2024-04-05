@@ -11,7 +11,6 @@ RISC-V 32 is a version of the RISC-V instruction set architecture that operates 
 * STRV32I STRCUTURE
 * OPERATION
 * OUTPUT
-* WAVEFORM
 </i></b>
 
 # <i><b>DESIGN SPECIFICATIONS</i></b>
@@ -104,86 +103,33 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
 
  * <i><b>PC Unit</i></b>:
 
-The Program Counter is a register in a CPU that stores the memory address of the next instruction to be fetched and executed. It keeps track of the current position in the program's execution sequence.
-<b>Fetching Instructions</b>: The Program Counter unit is responsible for fetching instructions from memory. It retrieves the instruction located at the memory address stored in the Program Counter register.
-
-<b>Incrementing</b>: After fetching an instruction, the Program Counter is typically incremented to point to the next instruction in memory. This prepares it to fetch the next instruction in the sequence.
-
-<b>Branching</b>: During program execution, control flow instructions such as branches (conditional or unconditional) may alter the flow of execution. In such cases, the Program Counter is updated to point to a different memory address based on the branch condition or target address.
-
-<b>Jumping</b>: Jump instructions, which transfer control to a different part of the program, also involve modifying the Program Counter. The new memory address to jump to is typically loaded into the Program Counter, redirecting the execution flow.
-
-<b>Interrupts and Exceptions</b>: When handling interrupts or exceptions, the Program Counter may be saved or modified to ensure proper program execution after the interrupt is serviced.
-
 
 * <i><b>Branch Unit</i></b>
 
-One of the key functions of the branch unit is to predict the outcome of branch instructions before their execution. This prediction is based on various factors, such as the history of previous branches, the program counter (PC), and branch history tables. Predicting whether a branch will be taken (i.e., the condition will evaluate to true) or not taken (i.e., the condition will evaluate to false) is crucial for minimizing pipeline stalls and improving performance.When a branch instruction is encountered, the branch unit calculates the target address of the branch. This target address determines the location in the instruction stream where program execution will continue after the branch is resolved.
-
 * <i><b>Control unit</i></b>
-
-The Control Unit (CU) is a core component of the Central Processing Unit (CPU) responsible for coordinating and directing the operation of the entire processor. It interprets and executes instructions, directing the flow of data between the CPU's various functional units and external devices. The primary functions of the control unit include instruction decoding, instruction sequencing, and generating control signals to coordinate the operation of other CPU components.
 
 * <i><b>Instruction Unit</i></b>
 
-An instruction multiplexer (mux) is a component within a CPU's control unit responsible for selecting the next instruction to be executed from among multiple possible sources. It plays a crucial role in directing the flow of instruction execution within the CPU.Instruction muxes are often used at various stages of the CPU's instruction pipeline to select the appropriate instruction for each pipeline stage. This helps ensure that instructions are fetched and processed efficiently, minimizing pipeline stalls and improving overall CPU performance.
 
 * <i><b>Write Enable Generator</i></b>
-
-A write enable generator is a component within a computer system, often found in memory and input/output (I/O) interfaces, that generates signals to control when data can be written to a specific location in memory or when output data can be enabled for transmission.The write enable generator plays a crucial role in coordinating write operations in computer systems, ensuring that data is written or output only when appropriate and in a manner consistent with the system's operation.
 
 
 
 * <i><b>Immediate Adder</i></b>
 
-An immediate adder, also known as a constant adder or immediate arithmetic unit, is a component found within a CPU's arithmetic logic unit (ALU) that performs addition operations involving immediate values or constants.Immediate adders are commonly used in CPU architectures to perform arithmetic operations that involve immediate values, such as adding constants to variables or performing arithmetic with small fixed values. They play a crucial role in executing instructions efficiently, particularly in the context of arithmetic and logical operations with immediate operands.
-
 
 
 * <i><b>Immediate Generator</i></b>
 
-Immediate generators are essential for efficient execution of instructions that involve immediate operands, as they eliminate the need to access memory or registers to fetch these constants, thereby reducing latency and improving performance.
-
-Constant Encoding: In some architectures, the immediate values are encoded directly within the instruction bits. The immediate generator decodes these encoded values and provides them to the execution units.
-
-Sign Extension: For signed immediate values, the immediate generator may perform sign extension, which extends the sign bit of the immediate value to fill the full width of the operand, ensuring correct arithmetic operations.
-
-Zero Extension: Similarly, for unsigned immediate values, the immediate generator may perform zero extension, which fills the unused bits with zeroes to match the operand width.
-
-Shift and Masking: In some cases, the immediate generator may perform shifting or masking operations to adjust the immediate value according to the instruction's requirements.
-
-
-
 * <i><b>Decoder Unit</i></b>
 
-The decoder unit, also known as the instruction decoder, is a crucial component within the CPU that interprets and decodes instructions fetched from memory. Its primary function is to translate binary instructions into control signals that coordinate the operation of other CPU components, such as the ALU, registers, and memory units.The decoder unit receives the binary representation of instructions fetched from memory. It analyzes the opcode and any associated fields or parameters within the instruction to determine the type of operation to be performed and the operands involved.The decoder unit also plays a role in coordinating the sequencing of instructions within the CPU. It may generate signals to advance the Program Counter (PC) to the next instruction address, ensuring that instructions are executed in the correct sequence.
-
 * <i><b>ALU Unit</i></b>
-
-The Arithmetic Logic Unit (ALU) is a fundamental component of a CPU responsible for performing arithmetic and logical operations on data. It's a combinational circuit that takes input data from registers, performs the specified operation, and produces the result.
-
-Inputs: The ALU receives operands from CPU registers or memory. These operands are the data on which the arithmetic or logical operation is to be performed. In some cases, the ALU may also receive control signals specifying the operation to be executed.
-
-Operations: The ALU can perform a variety of operations, including addition, subtraction, AND, OR, XOR, shift operations (left shift, right shift), comparison (equality, less than, greater than), and more. The specific operation performed is determined by control signals received by the ALU.
-
-Output: After performing the operation, the ALU produces a result, which is typically stored back in a register or sent to another part of the CPU for further processing. The output may also include status flags indicating the result of the operation, such as overflow, carry, zero, or negative flags.
-
-Speed and Efficiency: ALUs are designed to perform operations quickly and efficiently, often using parallelism and pipelining techniques to maximize throughput. They are critical for the overall performance of the CPU, as many instructions executed by the CPU involve operations performed by the ALU.
 
 
 * <i><b>Load unit</i></b>
 
- Load unit, also known as a load/store unit, is a component within a CPU responsible for handling load and store operations between the CPU and memory. Load operations involve transferring data from memory to CPU registers, while store operations involve transferring data from CPU registers to memory.Once the memory address is calculated, the load unit initiates a memory access operation to read or write data. This involves sending a request to the memory subsystem, specifying the memory address and the desired operation (read or write).The load unit is a critical component of the CPU's memory subsystem, responsible for efficiently transferring data between the CPU and memory. Its performance and efficiency significantly impact the overall performance of the CPU and system.
-
-
-
-
-
-
 
 * <i><b>Store unit</i></b>
-
-A "store unit" in a computer architecture context typically refers to the component responsible for performing store or write operations to memory. It's a part of the memory subsystem of a CPU and is involved in transferring data from registers or caches to memory.The store unit plays a crucial role in the memory subsystem of a CPU, facilitating the efficient transfer of data between the CPU and memory. Its performance and reliability are essential for the overall system performance and data integrity.
 
 
 # <i><b> OUTPUT</i></b>
