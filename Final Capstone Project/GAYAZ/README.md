@@ -144,31 +144,41 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
 
 R-type instructions involve operation between two operands stored in two on-chip registers. The fetched instruction should provide the address to the two operands and help the processor to decode the type of operation to be performed.
 
-<b>EXAMPLE</b>
+- **EXAMPLE**
+      - Instruction: add x28, x12, x13
+      - Description: The contents of register x1 and x12 are to be added and stored back to the x2 register.
 
-- Instruction: add x28, x12, x13
-- Description: The contents of register x1 and x12 are to be added and stored back to the x2 register.
+     - As per the ISA,
 
-- As per the ISA,
-    - Hex equivalent: 00d60e33
-    - Bin equivalent: 00000000110101100000111000110011
-    - Opcode: 011_0011
-    - funct3: 3’b000
-    - funct7: 7’b000_0000        
-    - rs1_addr: 5’hC         
-    - rs2_addr: 5’hd         
-    - rd_addr: 5’h1C        
-    - The instruction has been stored at memory location: 40 (or 28H)        
-    - Machine cycles taken: 1
-    - No. of clock cycles: 3
-
+      - Hex equivalent: 00d60e33
+         
+      - Bin equivalent: 00000000110101100000111000110011
+         
+      - Opcode: 011_0011
+         
+      - funct3: 3’b000
+         
+      - funct7: 7’b000_0000
+         
+      - rs1_addr: 5’hC
+         
+      - rs2_addr: 5’hd
+         
+      - rd_addr: 5’h1C
+        
+      - The instruction has been stored at memory location: 40 (or 28H)
+        
+      - Machine cycles taken: 1
+        
+      - No. of clock cycles: 3
+        
      - Working:
          
-        - In the first cycle, the address from the processor is sent to the icache and instruction reaches the processor in the second cycle.
-        - In next cycle, the instruction is decoded and data is read from the on-chip registers
-        - In the third cycle, the addition is performed and data is sent to on-chip registers for storage.
+      - In the first cycle, the address from the processor is sent to the icache and instruction reaches the processor in the second cycle.
+      - In next cycle, the instruction is decoded and data is read from the on-chip registers
+      - In the third cycle, the addition is performed and data is sent to on-chip registers for storage.
         
-   
+        
 <p align ="center">
  <img src="https://github.com/GayazPatan/Images/assets/156210984/fbeffdbb-717f-4b36-aad4-7b20a4092d91" width="720px" height=auto />
 </p>
