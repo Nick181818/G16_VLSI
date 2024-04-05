@@ -172,8 +172,8 @@ These instructions operate on data held in registers. It cover arithmetic (such 
 
 
 - **EXAMPLE**
-     - Instruction: add x28, x12, x13
-     - Description: The contents of register x1 and x12 are to be added and stored back to the x2 register.
+    - Instruction: add x28, x12, x13
+    - Description: The contents of register x1 and x12 are to be added and stored back to the x2 register.
 
      - As per the ISA,
 
@@ -210,7 +210,7 @@ I-type instructions execute operations like immediate arithmetic (addition, subt
       thex10 register.
 
     - As per the ISA,
-    - Hex equivalent: 00258513
+      - Hex equivalent: 00258513
       - Bin equivalent: 00000000001001011000010100010011
       - Opcode: 001_0011
       - funct3: 3’b000
@@ -260,18 +260,7 @@ I-type instructions execute operations like immediate arithmetic (addition, subt
         - In the third cycle, the addition is performed and data is sent to on-chip registers for storage.
 
 
-- **EXAMPLE**
-    - Instruction: sh x12, 0x6(x10)
-    - Description: The contents of register x12 are stored to data memory(dcache) via the store unit. Since this is sh instruction, only half word is loaded to the memory location [6H + [x10]], content of [x10] in this case is 2H. Hence, the destination address in this case is 8H.
-
-    - As per the ISA,
-         
-    - Working:
-        
-        - In the first cycle, the address from the processor is sent to the icache and instruction reaches the processor in the second cycle.
-        - In next cycle, the instruction is decoded and data is read from the on-chip registers
-        - In the third cycle, the addition is performed and data is sent to on-chip registers for storage.
-
+-
 <p align ="center">
  <img src="https://github.com/GayazPatan/Images/assets/156210984/a051f898-db8e-41bd-b978-ecf9da472c21" width="720px" height=auto />
 </p>
