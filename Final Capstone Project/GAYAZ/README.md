@@ -235,6 +235,29 @@ I-type instructions execute operations like immediate arithmetic (addition, subt
 *  <i><b>S-Type </i></b>
 
  S-Type instructions in the RISC-V architecture primarily used for storing values in memory locations. It store a register value into memory at an offset determined by an immediate value.
+ - **EXAMPLE**
+      - Instruction: sh x12, 0x6(x10)
+      - Description: The contents of register x12 are stored to data memory(dcache) via the store unit. Since this is sh instruction, only half word is loaded to the memory location [6H + [x10]], content of [x10] in this case is 2H. Hence, the destination address in this case is 8H.
+
+    - As per the ISA,
+        - Hex equivalent: 00C51323
+        - Bin equivalent: 00000000110001010001001100100011
+        - Opcode: 010_0111
+        - funct3: 3’b001
+        - funct7: 7’b000_0000
+        - rs1_addr: 5’h
+        - rs2_addr: 5’hC
+        - rd_addr: (ignorable)
+        - The instruction has been stored at memory location: 40 (or 28H)
+        - Machine cycles taken: 2         
+        - No. of clock cycles: 3
+         
+    - Working:
+        
+        - In the first cycle, the address from the processor is sent to the icache and instruction reaches the processor in the second cycle.
+        - In next cycle, the instruction is decoded and data is read from the on-chip registers
+        - In the third cycle, the addition is performed and data is sent to on-chip registers for storage.
+
 
 - **EXAMPLE**
       - Instruction: sh x12, 0x6(x10)
