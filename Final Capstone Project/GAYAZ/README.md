@@ -151,25 +151,15 @@ R-type instructions involve operation between two operands stored in two on-chip
      - As per the ISA,
 
         - Hex equivalent: 00d60e33
-         
         - Bin equivalent: 00000000110101100000111000110011
-         
         - Opcode: 011_0011
-         
         - funct3: 3’b000
-         
         - funct7: 7’b000_0000
-         
         - rs1_addr: 5’hC
-         
-        - rs2_addr: 5’hd
-         
+        - rs2_addr: 5’hD
         - rd_addr: 5’h1C
-        
         - The instruction has been stored at memory location: 40 (or 28H)
-        
-        - Machine cycles taken: 1
-        
+        - Machine cycles taken: 1    
         - No. of clock cycles: 3
         
      - Working:
