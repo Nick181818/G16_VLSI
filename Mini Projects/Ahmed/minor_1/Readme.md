@@ -1,8 +1,8 @@
 # HDLBit Solution
 
-This HDLBit Solution Repository is a compilation of my implementations and solutions for exercises and projects offered by HDLBit.
+This HDLBit Solution Repository is a compilation of my implementations and solutions for exercises offered by HDLBit.
 
-#### Directory Structure
+## Directory Structure
 ```
 ├───01 Getting Started
 ├───02 Verilog_Language
