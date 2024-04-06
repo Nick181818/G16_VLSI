@@ -292,7 +292,7 @@ A 3-stage pipelined RISC data path divides the instruction execution into three 
 </p> 
 
 ### *U - Type :*
-- $Instruction$$ $:$ $lui$  $x13$, $0x56789$
+- $Instruction$ $:$ $lui$  $x13$, $0x56789$
 
  - $As$ $per$ $the$ $ISA$,
    - $Hex$ $equivalent$   $:$  $567896b7 $
