@@ -133,7 +133,8 @@ These instruction types provide a comprehensive set of operations for arithmetic
 
   <img src="https://github.com/Sachind01/G16/assets/114092614/431958ff-7578-43e5-ac78-51fac4549975" width="720px" Height="auto">
 </p>
-	
+
+<PDF FILE OF SCHEMATIC>	
 <p align = "center">
   <img src="https://github.com/Sachind01/G16/files/14892273/schematic.pdf" width="720px" Height="auto">
 </p>
