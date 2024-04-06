@@ -1,0 +1,42 @@
+SURE TRUST'S STRV32I Processor
+
+Introduction:
+Welcome to the STRV32I processor, a cutting-edge 3-stage pipelined RISC-V processor meticulously designed to adhere to the RV32I ISA standards. This processor is engineered for efficiency, performance, and versatility, making it an ideal choice for a wide range of embedded system applications.
+
+Architecture Overview:
+
+The STRV32I processor boasts a sophisticated architecture comprising carefully crafted components:
+
+Top_module: The top-level module responsible for integrating all the components of the processor.
+PC_MUX: Selects the next program counter (PC) value based on control signals.
+Reg_block: Registers used for storing intermediate results and data between pipeline stages.
+Immediate_adder: Adds immediate values to operands.
+Write_enable_generator: Generates write enable signals for register file and data memory.
+Control_unit: Decodes instructions and generates control signals for various components.
+Immediate_generator: Generates immediate values for certain instructions.
+Reg_file: Register file for storing general-purpose registers.
+Instruction_mux: Selects the instruction for execution.
+Branch_unit: Handles branch instructions and determines branch outcomes.
+Load_unit: Executes load instructions, fetching data from data memory.
+Store_unit: Executes store instructions, writing data to data memory.
+Decoder_unit: Decodes instructions and extracts relevant fields.
+ALU_block: Performs arithmetic and logic operations.
+Reg_block2: Additional register block for handling register write-back stage.
+WB_MUX: Selects the data to be written back to the register file.
+
+Interface Details
+
+General Interface:
+clk_in: The heartbeat of the processor, driving operations at 10MHz.
+rst_in: The reset signal, activating the processor with a synchronized high signal.
+
+Instruction Cache Interface:
+imaddr_out: Channeling target addresses to the instruction cache, enabling seamless instruction fetching.
+instr_in: The lifeline of the processor, feeding 32-bit instructions fetched from the instruction cache.
+
+Data Cache Interface:
+dmwr_req_out: The signal commander, orchestrating write requests to the data cache for reads and writes.
+dmaddr_out: A pathway to data memory, transmitting 32-bit target addresses for read/write operations.
+dmdata_in: The lifeblood of the processor during loads, carrying 32-bit data from data memory.
+dmdata_out: The vessel of change, ferrying 32-bit data to be written to data memory during store operations.
+dmwr_mask_out: The guardian of data integrity, ensuring precise masking during data cache write operations.
