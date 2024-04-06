@@ -1,10 +1,9 @@
 module pc_unit (
     input           rst_in,
+    input           branch_taken_in,
     input [1:0]     pc_src_in,
     input [31:0]    pc_in,
-    input           branch_taken_in,
     input [30:0]    iaddr_in,
-    
     output          misaligned_instr_out,
     output [31:0]   pc_mux_out,
     output [31:0]   pc_plus_4_out,
@@ -20,8 +19,8 @@ module pc_unit (
     reg [31:0] next_pc;
     reg [31:0] pc_mux_out_net;
     
-    parameter RESET_STATE       = 2'b00;
-    parameter OPERATING_STATE   = 2'b11;
+    parameter RST_STATE       = 2'b00;
+    parameter OPERAT_STATE   = 2'b11;
 
     // MUX Branch Taken
     always @ (*)
@@ -36,18 +35,18 @@ module pc_unit (
     always @ (*)
     begin
         case (pc_src_in)
-            RESET_STATE     : pc_mux_out_net = 32'h00000000;
-            OPERATING_STATE : pc_mux_out_net = next_pc;
+            RST_STATE       : pc_mux_out_net = 32'h00000000;
+            OPERAT_STATE    : pc_mux_out_net = next_pc;
             default           pc_mux_out_net = next_pc;
         endcase
     end
     
     
     // Assignments
-    assign pc_plus_4_out        = PC_plus_4_net;
-    assign pc_mux_out           = pc_mux_out_net;
     
     assign i_addr_out           = (!rst_in) ? pc_mux_out_net : 32'h00000000;
+    assign pc_plus_4_out        = PC_plus_4_net;
+    assign pc_mux_out           = pc_mux_out_net;
     assign misaligned_instr_out = branch_taken_in & next_pc[1];
 
 endmodule  

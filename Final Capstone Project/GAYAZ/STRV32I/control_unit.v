@@ -7,13 +7,13 @@ module control_unit(
 
 );
   
-   parameter reset=0,operate=1; 
+   parameter rst=0,operate=1; 
    reg state,next;
 
    always @(*)
      begin 
        case(state)
-         reset   : next = operate;
+         rst   : next = operate;
          operate : next = operate;
         endcase
     end
@@ -21,7 +21,7 @@ module control_unit(
     always @(posedge clk_in) 
       begin 
         if(rst_in)
-          state <= reset;
+          state <= rst;
         else 
           state <= next;
       end
@@ -29,7 +29,7 @@ module control_unit(
     
     always @(*)
       begin
-        if (state == reset) 
+        if (state == rst) 
           begin
             flush_out = 1'b1;
             pc_src_out = 2'b00;
