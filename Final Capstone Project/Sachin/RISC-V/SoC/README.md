@@ -26,7 +26,7 @@
 *Design a 3-stage pipelined RISC-V processor that works on RV32I ISA- STRV32I.*
 
 <p align = "center">
-  <img src="https://github.com/Sachind01/G16/assets/114092614/e4e64ed6-7a5f-4983-a57b-a0b478777128" width="720px" Height="auto">
+  <img src="https://github.com/Sachind01/G16/assets/114092614/20f39fbe-1536-48d2-b681-a8aa9f312b29" width="720px" Height="auto">
 </p>
 
 
@@ -77,11 +77,7 @@ dmdata_out: This is the 32-bit data to be written to dcache. During the Store.
 
 dmwr_mask_out: This is a 4-bit mask signal that decides the bits to be masked during the dcache write operation.
 
-**<RISC-V ARCHITECTURE DATAPATH>**
-
-<p align = "center">
-  <img src="https://github.com/Sachind01/G16/assets/114092614/68de85ec-8947-4999-885d-f7631f3ad773" width="720px" Height="auto">
-</p>
+**<RISC-V INSTRUCTIONS>**
 
 
 * R-Type Instructions:
@@ -113,19 +109,34 @@ dmwr_mask_out: This is a 4-bit mask signal that decides the bits to be masked du
 
 			Example: `beq x9, x10, label` (branches to the specified label if the values in registers x9 and x10 are equal)
 
-* 	J-Type Instructions:
+* J-Type Instructions:
 
-			J-Type instructions are unconditional jump instructions that transfer control to a new address specified by an immediate value.
+		J-Type instructions are unconditional jump instructions that transfer control to a new address specified by an immediate value.
 
-			Example: `jal x11, func` (jumps to the address of the func label, and stores the return address in register x11)
+		Example: `jal x11, func` (jumps to the address of the func label, and stores the return address in register x11)
 
-*  	U-Type Instructions:
+*  U-Type Instructions:
 		
-			U-Type instructions are used for loading upper immediate values into registers, typically for generating addresses or immediate values larger than those supported by I-Type instructions.
+		U-Type instructions are used for loading upper immediate values into registers, typically for generating addresses or immediate values larger than those supported by I-Type instructions.
 
-			Example: `lui x12, 0x10000` (loads the upper 20 bits of the immediate value 0x10000 into register x12, effectively setting the register to 0x10000000)
+		Example: `lui x12, 0x10000` (loads the upper 20 bits of the immediate value 0x10000 into register x12, effectively setting the register to 0x10000000)
 
 These instruction types provide a comprehensive set of operations for arithmetic, data transfer, control flow, and memory access, enabling the RISC-V architecture to support a wide range of applications and workloads.
 
 
 **To ensure code quality and adherence to best practices, linting was performed on the STRV32I processor design codebase, which helps catch potential errors, enforces coding standards, and improves code maintainability.**
+
+
+**<RISC-V STRV32I SCHEMATIC>**
+
+<p align = "center">
+
+  <img src="https://github.com/Sachind01/G16/assets/114092614/431958ff-7578-43e5-ac78-51fac4549975" width="720px" Height="auto">
+</p>
+
+
+*<PDF FILE OF SCHEMATIC>*
+
+<p align = "center">
+  <img src="https://github.com/Sachind01/G16/files/14892273/schematic.pdf" width="720px" Height="auto">
+</p>
