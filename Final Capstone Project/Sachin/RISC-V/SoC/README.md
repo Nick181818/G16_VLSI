@@ -127,14 +127,16 @@ These instruction types provide a comprehensive set of operations for arithmetic
 **To ensure code quality and adherence to best practices, linting was performed on the STRV32I processor design codebase, which helps catch potential errors, enforces coding standards, and improves code maintainability.**
 
 
-**<RISC-V STRV32I SCHEMATIC>
+**<RISC-V STRV32I SCHEMATIC>**
 
 <p align = "center">
 
   <img src="https://github.com/Sachind01/G16/assets/114092614/431958ff-7578-43e5-ac78-51fac4549975" width="720px" Height="auto">
 </p>
 
-<PDF FILE OF SCHEMATIC>	
+
+*<PDF FILE OF SCHEMATIC>*
+
 <p align = "center">
   <img src="https://github.com/Sachind01/G16/files/14892273/schematic.pdf" width="720px" Height="auto">
 </p>
