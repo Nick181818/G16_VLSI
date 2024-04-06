@@ -186,8 +186,7 @@ A 3-stage pipelined RISC data path divides the instruction execution into three 
 ### *Tool Simulation :*
 
 <p align="center">
-  <img src="https://github.com/ShoaibMalikSM/README-2-.md/assets/156204834/82504afb-3e54-430e-a586-fda9d7b3f351
-  " width="800">
+  <img src="https://github.com/ShoaibMalikSM/README-2-.md/assets/156204834/5a5a3cb8-6d77-41e8-8ae8-2e0aa5d6023b" width="800">
 </p> 
 
 
@@ -209,8 +208,7 @@ A 3-stage pipelined RISC data path divides the instruction execution into three 
 ### *Tool Simulation :*
 
 <p align="center">
-  <img src="https://github.com/ShoaibMalikSM/README-2-.md/assets/156204834/78534de9-a752-4b7b-9a7b-7f68bb82fa48
-  " width="800">
+  <img src="https://github.com/ShoaibMalikSM/README-2-.md/assets/156204834/e3829641-5a7c-4a1b-9596-d5ada63457e9" width="800">
 </p> 
 
 
