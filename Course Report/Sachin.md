@@ -6,7 +6,7 @@
 
 
 <h3 align="center">SURE Trust - Skill Upgradation for Rural-youth Empowerment Trust</h3>
-  <h2> G16-VLSI </h2>
+  <h2> VLSI Front End </h2>
 </div>
 
 # Course Report
@@ -23,6 +23,5 @@ Below is a table summarizing the mini projects and final project completed durin
 
 | Description                               | Link                                    |
 |-------------------------------------------|-----------------------------------------|
-| Mini Projects 1: HDLBits Problems    | https://github.com/Sachind01/G16_VLSI/tree/main/Mini%20Projects/Sachin/Minor%20Project-1                         |
-| Mini Projects 2: Asynchronous FIFO     | https://github.com/Sachind01/G16_VLSI/tree/main/Mini%20Projects/Sachin/Minor%20Project-2                         |
-| Final Project: RISC-V PROCESSOR (STRV32I)     | https://github.com/Sachind01/G16_VLSI/tree/main/Final%20Capstone%20Project/Sachin/RISC-V/SoC                         |
+| Mini Projects 1: HDLBits Problems,Asynchronous FIFO    |   [Click Here](https://github.com/sure-trust/G16_VLSI/tree/main/Mini%20Projects/Sachin)                       |
+| Final Project: RISC-V PROCESSOR (STRV32I)     |     [Click Here](https://github.com/sure-trust/G16_VLSI/tree/main/Final%20Capstone%20Project/Sachin/RISC-V/SoC)                 |
