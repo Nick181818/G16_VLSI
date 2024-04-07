@@ -6,7 +6,7 @@
 
 
 <h3 align="center">SURE Trust - Skill Upgradation for Rural-youth Empowerment Trust</h3>
-  <h2> Course Name </h2>
+  <h2> VLSI Front End </h2>
 </div>
 
 # Course Report
@@ -23,6 +23,5 @@ Below is a table summarizing the mini projects and final project completed durin
 
 | Description                               | Link                                    |
 |-------------------------------------------|-----------------------------------------|
-|Mini Project 1: HDL Bits                    |[https://github.com/Nick181818/G16_VLSI/tree/main/Mini%20Projects/Nikshith/minor_1]
- Mini Project 2: DESIGN OF AN ASYNCHRONOUS FIFO |[https://github.com/Nick181818/G16_VLSI/tree/main/Mini%20Projects/Nikshith/minor%202]                         
-| Final Project: STRV32I RISCV PROCESSOR    | [https://github.com/Nick181818/G16_VLSI/tree/main/Final%20Capstone%20Project/Nikshith]                         |
+|Mini Project 1: HDL Bits,DESIGN OF AN ASYNCHRONOUS FIFO                    |[Click Here](https://github.com/sure-trust/G16_VLSI/tree/main/Mini%20Projects/Nikshith)|
+| Final Project: STRV32I RISCV PROCESSOR    | [Click here](https://github.com/sure-trust/G16_VLSI/tree/main/Final%20Capstone%20Project/Nikshith)                         |
