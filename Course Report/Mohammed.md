@@ -23,6 +23,6 @@ Below is a table summarizing the mini projects and final project completed durin
 
 | Description                               | Link                                    |
 |-------------------------------------------|-----------------------------------------|
-| Mini Projects 1: HDL BITS     | [Project Link] ( https://github.com/touheed1829/G16_VLSI/tree/main/Mini%20Projects/Mohammed/01_Minor  )                    |
-| Mini Projects 2: DESIGN OF AN ASYNCHRONOUS FIFO     | [Project Link]   (https://github.com/touheed1829/G16_VLSI/tree/main/Mini%20Projects/Mohammed/02_Minor              )      |
-| Final Project: STRV32I RISCV PROCESSOR     | [Project Link] (https://github.com/touheed1829/G16_VLSI/tree/main/Final%20Capstone%20Project/Mohammed  )                       |   
+| Mini Projects 1: HDL BITS     | [Project Link]( https://github.com/touheed1829/G16_VLSI/tree/main/Mini%20Projects/Mohammed/01_Minor  )                    |
+| Mini Projects 2: DESIGN OF AN ASYNCHRONOUS FIFO     | [Project Link](https://github.com/touheed1829/G16_VLSI/tree/main/Mini%20Projects/Mohammed/02_Minor              )      |
+| Final Project: STRV32I RISCV PROCESSOR     | [Project Link](https://github.com/touheed1829/G16_VLSI/tree/main/Final%20Capstone%20Project/Mohammed  )                       |   
