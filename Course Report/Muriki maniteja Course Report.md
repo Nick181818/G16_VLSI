@@ -23,5 +23,5 @@ Below is a table summarizing the mini projects and final project completed durin
 
 | Description                               | Link                                    |
 |-------------------------------------------|-----------------------------------------|
-| Mini Project-1: HDL Bits, Design of an Asynchronous FIFO     |                         | [Click Here](https://github.com/sure-trust/G16_VLSI/tree/main/Mini%20Projects/Mani) |
+| Mini Project-1: HDL Bits, Design of an Asynchronous FIFO     |                          [Click Here](https://github.com/sure-trust/G16_VLSI/tree/main/Mini%20Projects/Mani) |
 | Final Project: [Design of a 3-stage RISC-V Processor]     |      [Click Here](https://github.com/sure-trust/G16_VLSI/tree/main/Final%20Capstone%20Project/Mani)                   |
