@@ -109,7 +109,7 @@ RISC-V stands as a beacon in modern computing due to its revolutionary features 
 
 # <i><b>OPERATION</i></b>
 
- * <i><b>PC Unit</i></b>:
+* <i><b>PC Unit</i></b>:
 
   - The PC unit, or Program Counter unit, manages the program counter, a register that holds the memory address of the next instruction to be fetched, facilitating sequential instruction execution and control flow management.
 

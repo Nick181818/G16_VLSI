@@ -10,10 +10,10 @@ module reg_file(
      output wire [31:0] rs2_out//32 Bits rs2_out {Wire Type}
      );
   //Declaring connections
-  reg [31:0] rs1_data_out;
-  reg [31:0] rs2_data_out;
+  reg [31:0] reg1_data_out;
+  reg [31:0] reg2_data_out;
 //Declaring Memory
-  reg [31:0] Ram [0:31];
+  reg [31:0] rgs [0:31];
   integer i;
 
  always @ (posedge clk_in)
@@ -22,25 +22,25 @@ module reg_file(
       begin
         for(i=0;i<32;i=i+1)
         begin
-          Ram[i] <= 32'b0000_0000;
+          rgs[i] <= 32'b0000_0000;
         end
       end
         else if (wr_en_in && rd_addr_in != 0)//Filling Up Memory by given Input data
           begin
-            Ram[0]  <=  32'b0000_0000; 
-            Ram[rd_addr_in] <=  rd_data;
+            rgs[0]  <=  32'b0000_0000; 
+            rgs[rd_addr_in] <=  rd_data;
           end
         else 
-          Ram[rd_addr_in]   <=  Ram[rd_addr_in];  
+          rgs[rd_addr_in]   <=  rgs[rd_addr_in];  
     end
 
   always @ (posedge clk_in)
     begin
-      rs1_data_out  <=  Ram[rs1_addr_in];
-      rs2_data_out  <=  Ram[rs2_addr_in];
+      reg1_data_out  <=  rgs[rs1_addr_in];
+      reg2_data_out  <=  rgs[rs2_addr_in];
     end
 //Assigning the values of output
-  assign rs1_out    =   (rs1_addr_in == rd_addr_in) ? rd_data : rs1_data_out;
-  assign rs2_out    =   (rs2_addr_in == rd_addr_in) ? rd_data : rs2_data_out;
+  assign rs1_out    =   (rs1_addr_in == rd_addr_in) ? rd_data : reg1_data_out;
+  assign rs2_out    =   (rs2_addr_in == rd_addr_in) ? rd_data : reg2_data_out;
   
 endmodule
